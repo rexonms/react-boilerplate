@@ -5,7 +5,7 @@ import { withInfo } from '@storybook/addon-info';
 
 import Paragraph from './index';
 
-const stories = storiesOf('Paragraph', module);
+const stories = storiesOf('Components/Typography/Paragraph', module);
 stories.addDecorator(withKnobs);
 
 const ipsumA = 'Cupcake ipsum dolor sit amet icing cupcake jelly-o liquorice. Macaroon croissant pudding tootsie roll jelly-o I love marshmallow I love. Jelly beans I love dragée gingerbread apple pie gummies chocolate chocolate cake.';

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import Title from '../../components/Title/';
-import Paragraph from '../../components/Paragraph/';
+import Paragraph from '../../components/Typography/Paragraph/';
 // import './styles.scss';
 
 class HomeInner extends Component {

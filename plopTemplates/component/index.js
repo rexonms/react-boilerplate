@@ -1,21 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './Title.scss';
+import styles from './styles.scss';
 
-const Title = props => (
+const Comp = props => (
   <div className={`${styles.container}`}>
     {props.name}
   </div>
 );
 
-Title.defaultProps = {};
+Comp.defaultProps = {};
 
-Title.propTypes = {
+Comp.propTypes = {
   /** Name of the component */
   name: PropTypes.string.isRequired,
 
 
 };
 
-export default Title;
+export default Comp;

@@ -1,5 +1,12 @@
-body {
+:global body {
+  background: red;
   * {
     font-family: $fontDefault;
+    font-size: $fontSizeDefault;
+    color: $defaultFontColor;
   }
+}
+
+input {
+  border: 5px solid red;
 }
