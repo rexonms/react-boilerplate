@@ -1,0 +1,37 @@
+/****************************************************
+ LOADING ANIMATION
+****************************************************/
+.section-loader {
+    top: 100px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.css-animations .section-loader:before, .css-animations .section-loader:after {
+    height: 50px;
+    width: 50px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    margin: auto;
+    overflow: hidden;
+    position: absolute;
+}
+
+.css-animations .section-loader:before {
+    background: url(https://www.tesla.com/sites/default/files/images/referral/cssAnimationLoader.png);
+    background-size: 100%;
+    -webkit-animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg); }
+    to {
+        transform: rotate(360deg); }
+}

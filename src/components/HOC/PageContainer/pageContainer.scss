@@ -1,0 +1,11 @@
+.container {
+  height: calc(100% - 40px);
+  width: 100%;
+}
+.page {
+  padding: 20px;
+  height: calc(100%);
+  width: calc(100% - 40px);
+  background-color: #333;
+  //webkit-overflow-scrolling: touch;
+}

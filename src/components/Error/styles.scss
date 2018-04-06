@@ -1,0 +1,23 @@
+$errorContentColor: #ccc;
+$errorIconSize: 50px;
+
+.error-box{
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    width:100%;
+    justify-content: center;
+}
+
+.error-box__icon{
+    height: 75px;
+    background-image: url(https://www.tesla.com/sites/default/files/images/referral/icon-alert_0.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: $errorIconSize;
+}
+
+.error-box__text{
+    color: $errorContentColor;
+    text-align: center;
+}
