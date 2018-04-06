@@ -14,7 +14,7 @@ initGoogleAnalytics();
 // The location prop is used for transition effect
 ReactDOM.render(
   <Provider store={store}>
-    <BrowserRouter basename="/referral">
+    <BrowserRouter basename="">
       <Route path="/" component={Main} />
     </BrowserRouter>
   </Provider>,

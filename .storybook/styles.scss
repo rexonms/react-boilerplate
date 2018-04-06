@@ -1,0 +1,12 @@
+.backgroundBlack {
+  width: 100vw;
+  height: 100vh;
+  background: black;
+}
+.centered {
+  display: flex;
+  margin: auto;
+  div{
+    margin: auto;
+  }
+}
