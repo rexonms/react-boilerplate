@@ -28,28 +28,33 @@ const generator = (plop) => {
       },
     ],
     actions(response) {
-      console.log('response*****', response)
+      // console.log('response*****', response);
+      response.name = `${response.name.charAt(0).toUpperCase()}${response.name.slice(1)}`
       const actions = [
-        // create index file
+        // creates index file
         {
           type: 'add',
           path: `${destination}/${response.path}/${response.name}/index.js`,
           templateFile: `./plopTemplates/${response.template}/index.js`,
         },
+        // crates story file
         {
           type: 'add',
           path: `${destination}/${response.path}/${response.name}/index.stories.js`,
           templateFile: `./plopTemplates/${response.template}/index.stories.js`,
         },
+        // creates style sheet
         {
           type: 'add',
-          path: `${destination}/${response.path}/${response.name}/styles.scss`,
+          path: `${destination}/${response.path}/${response.name}/${response.name}.scss`,
           templateFile: `./plopTemplates/${response.template}/styles.scss`,
         },
+        // create assets folder
         {
           type: 'add',
           path: `${destination}/${response.path}/${response.name}/assets/foo.txt`,
         },
+        // create text file
         {
           type: 'add',
           path: `${destination}/${response.path}/${response.name}/__tests__/index.js`,
