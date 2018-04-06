@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './styles.scss';
+import styles from './{Components}.scss';
 
 const Component = props => (
   <div className={`${styles.container}`}>
