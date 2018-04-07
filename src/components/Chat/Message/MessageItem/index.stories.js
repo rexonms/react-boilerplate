@@ -6,7 +6,7 @@ import { withInfo } from '@storybook/addon-info';
 import MessageItem from './index';
 
 const stories = storiesOf('components/Chat/Message/MessageItem', module);
-const props = {
+export const props = {
   avatarImageURL: 'http://dummyimage.com/mediumrectangle/222222/eeeeee',
   recipientName: 'Mr. Smith',
   lastMessage: 'Howdy!',

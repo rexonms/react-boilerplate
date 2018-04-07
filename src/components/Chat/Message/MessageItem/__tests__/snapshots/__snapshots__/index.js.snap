@@ -5,8 +5,9 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <MessageItem
-    buttonLabelOff="off"
-    buttonLabelOn="on"
+    avatarImageURL="http://dummyimage.com/mediumrectangle/222222/eeeeee"
+    lastMessage="Howdy!"
+    recipientName="Mr. Smith"
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -25,18 +26,18 @@ ShallowWrapper {
           className="avatar"
 >
           <Avatar
-                    imageURL={undefined}
+                    imageURL="http://dummyimage.com/mediumrectangle/222222/eeeeee"
           />
 </div>,
         <div
           className="details"
 >
           <Heading6
-                    labelText={undefined}
+                    labelText="Mr. Smith"
           />
           <Paragraph
                     color=""
-                    label={undefined}
+                    label="Howdy!"
                     size="small"
           />
 </div>,
@@ -52,7 +53,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": <Avatar
-            imageURL={undefined}
+            imageURL="http://dummyimage.com/mediumrectangle/222222/eeeeee"
 />,
           "className": "avatar",
         },
@@ -62,7 +63,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "imageURL": undefined,
+            "imageURL": "http://dummyimage.com/mediumrectangle/222222/eeeeee",
           },
           "ref": null,
           "rendered": null,
@@ -77,11 +78,11 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Heading6
-              labelText={undefined}
+              labelText="Mr. Smith"
 />,
             <Paragraph
               color=""
-              label={undefined}
+              label="Howdy!"
               size="small"
 />,
           ],
@@ -94,7 +95,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "labelText": undefined,
+              "labelText": "Mr. Smith",
             },
             "ref": null,
             "rendered": null,
@@ -106,7 +107,7 @@ ShallowWrapper {
             "nodeType": "function",
             "props": Object {
               "color": "",
-              "label": undefined,
+              "label": "Howdy!",
               "size": "small",
             },
             "ref": null,
@@ -130,18 +131,18 @@ ShallowWrapper {
             className="avatar"
 >
             <Avatar
-                        imageURL={undefined}
+                        imageURL="http://dummyimage.com/mediumrectangle/222222/eeeeee"
             />
 </div>,
           <div
             className="details"
 >
             <Heading6
-                        labelText={undefined}
+                        labelText="Mr. Smith"
             />
             <Paragraph
                         color=""
-                        label={undefined}
+                        label="Howdy!"
                         size="small"
             />
 </div>,
@@ -157,7 +158,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": <Avatar
-              imageURL={undefined}
+              imageURL="http://dummyimage.com/mediumrectangle/222222/eeeeee"
 />,
             "className": "avatar",
           },
@@ -167,7 +168,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "imageURL": undefined,
+              "imageURL": "http://dummyimage.com/mediumrectangle/222222/eeeeee",
             },
             "ref": null,
             "rendered": null,
@@ -182,11 +183,11 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Heading6
-                labelText={undefined}
+                labelText="Mr. Smith"
 />,
               <Paragraph
                 color=""
-                label={undefined}
+                label="Howdy!"
                 size="small"
 />,
             ],
@@ -199,7 +200,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "labelText": undefined,
+                "labelText": "Mr. Smith",
               },
               "ref": null,
               "rendered": null,
@@ -211,7 +212,7 @@ ShallowWrapper {
               "nodeType": "function",
               "props": Object {
                 "color": "",
-                "label": undefined,
+                "label": "Howdy!",
                 "size": "small",
               },
               "ref": null,

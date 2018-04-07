@@ -4,39 +4,28 @@ import { shallow } from 'enzyme';
 
 import MessageItem from '../index';
 import styles from '../MessageItem.scss';
+import { props } from './../index.stories';
 
-export const props = {
-  buttonLabelOn: "on",
-  buttonLabelOff: "off",
-}
 describe('MessageItem Component', () => {
   const wrapper = shallow(<MessageItem {...props} />);
 
   it('renders with proper className', () => {
     expect(wrapper.exists(styles.container)).toBe(true);
+    expect(wrapper.exists(styles.avatar)).toBe(true);
+    expect(wrapper.exists(styles.details)).toBe(true);
     expect(wrapper.find(`.${styles.container}`)).toHaveLength(1);
   });
 
   it('container the required prop', () => {
-    expect(wrapper.exists(props.buttonLabelOn)).toBe(true);
+    expect(wrapper.exists(props.avatarImageURL)).toBe(true);
+    expect(wrapper.exists(props.recipientName)).toBe(true);
+    expect(wrapper.exists(props.lastMessage)).toBe(true);
   });
 
-  it('container the required prop', () => {
-    expect(wrapper.exists(props.buttonLabelOff)).toBe(true);
-  });
-
-  it('checks if toggle button is working properly', () => {
-    const button = wrapper.find(`.${styles.button}`);
-    // verifying default state
-    expect(wrapper.text()).toEqual(props.buttonLabelOn);
-
+  it('checks if toggle click button is working', () => {
+    const button = wrapper.find(`.${styles.container}`);
     button.simulate('click');
-    expect(wrapper.text()).toEqual(props.buttonLabelOff); // label text is changed
-    expect(wrapper.find(`.${styles.bulbOff}`)).toHaveLength(1); // className is changed
-
-    button.simulate('click');
-    expect(wrapper.text()).toEqual(props.buttonLabelOn);  // label text is changed
-    expect(wrapper.find(`.${styles.bulbOn}`)).toHaveLength(1); // className is changed
+    // expect(window.alert).toBe(props.recipientName);
   });
 });
 

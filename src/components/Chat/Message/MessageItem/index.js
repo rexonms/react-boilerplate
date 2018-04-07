@@ -25,7 +25,7 @@ class MessageItem extends Component {
     this.onClickHandler = this.onClickHandler.bind(this);
   }
   onClickHandler() {
-    alert(`Start chatting with ${this.props.recipientName}`)
+    alert(`${this.props.recipientName}`)
   }
 
   render () {
