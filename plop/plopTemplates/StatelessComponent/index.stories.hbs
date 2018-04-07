@@ -3,21 +3,22 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs/react';
 import { withInfo } from '@storybook/addon-info';
 
-import Avatar from './index';
+import {{name}} from './index';
 
-const stories = storiesOf('components/Avatar', module);
-const imageUrl = 'https://place-hold.it/100'
+const stories = storiesOf('{{path}}/{{name}}', module);
+const nameText = '{{name}}';
+
 stories.addDecorator(withKnobs);
 stories.addDecorator(story => (story()));
-stories.add('Avatar', withInfo(`
+stories.add('{{name}}', withInfo(`
   Component
   ~~~js
-    <Avatar imageURL=imageUrl />)
+    <{{name}} name='{{name}}' />)
   ~~~
 `)(() => {
   return (
-    <Avatar
-      imageURL={imageUrl}
+    <{{name}}
+      name={nameText}
     />
   );
 }));

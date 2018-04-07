@@ -14,10 +14,7 @@ class HomeInner extends Component {
     const { translations } = this.props.home.data;
     return (
       <div className="home">
-        <Title label={translations.message} />
-        <Paragraph label={translations.descriptionA} />
-        <Paragraph label={translations.descriptionB} />
-        <Paragraph label={translations.descriptionC} />
+       welcome
       </div>
     );
   }

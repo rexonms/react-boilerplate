@@ -2,6 +2,8 @@ import React from 'react';
 import { configure, addDecorator } from '@storybook/react';
 import '@storybook/addon-knobs/register';
 
+import styles from './styles.scss';
+
 const req = require.context('../src/components', true, /\.stories\.js$/);
 
 function loadStories() {
@@ -9,7 +11,7 @@ function loadStories() {
 }
 
 addDecorator(story => (
-  <div style={{ textAlign: 'left' }}> {/* Storybook styles */}
+  <div className={styles.container}> {/* Storybook styles */}
     {story()}
   </div>
 ));

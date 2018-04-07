@@ -2,69 +2,90 @@ const promptDirectory = require('inquirer-directory');
 const fs = require('fs');
 
 const getAllFilesOfPlopTemplates = rootPath => fs.readdirSync(rootPath).map(file => file);
-const destination = './src';
+const templateRoot = './plop/plopTemplates';
+
 const generator = (plop) => {
   plop.setPrompt('directory', promptDirectory);
   // create your generators here
-  plop.setGenerator('createComponent', {
-    description: 'Creates component boilerplate ',
+  plop.setGenerator('React Component Generator', {
+    description: 'Plop generator for React Components',
     prompts: [
       {
         type: 'directory',
         name: 'path',
-        message: 'Which component do you want to create?',
+        message: 'Where should the component be saved?',
         basePath: './src',
       },
       {
         type: 'input',
         name: 'name',
-        message: 'name of the component'
+        message: 'What is the name of you component?',
+        validate: (value) => {
+          if ((/.+/).test(value)) { return true; }
+          return 'Project name is required';
+        }
       },
       {
         type: 'list',
         name: 'template',
         message: 'Which template would you like to use',
-        choices: getAllFilesOfPlopTemplates('./plopTemplates'),
+        choices: getAllFilesOfPlopTemplates(templateRoot),
       },
     ],
     actions(response) {
-      // console.log('response*****', response);
-      response.name = `${response.name.charAt(0).toUpperCase()}${response.name.slice(1)}`
-      const actions = [
-        // creates index file
-        {
-          type: 'add',
-          path: `${destination}/${response.path}/${response.name}/index.js`,
-          templateFile: `./plopTemplates/${response.template}/index.js`,
-        },
-        // crates story file
-        {
-          type: 'add',
-          path: `${destination}/${response.path}/${response.name}/index.stories.js`,
-          templateFile: `./plopTemplates/${response.template}/index.stories.js`,
-        },
-        // creates style sheet
-        {
-          type: 'add',
-          path: `${destination}/${response.path}/${response.name}/${response.name}.scss`,
-          templateFile: `./plopTemplates/${response.template}/styles.scss`,
-        },
-        // create assets folder
-        {
-          type: 'add',
-          path: `${destination}/${response.path}/${response.name}/assets/foo.txt`,
-        },
-        // create text file
-        {
-          type: 'add',
-          path: `${destination}/${response.path}/${response.name}/__tests__/index.js`,
-          templateFile: `./plopTemplates/${response.template}/__tests__/index.js`,
-        },
-      ]
+      console.log('response*****', response);
+      const destination = './src';
+      let { name } = response;
+      const { path } = response;
+      const { template } = response;
+      const actions = [];
+
+      name = `${name.charAt(0).toUpperCase()}${name.slice(1)}`;
+
+      // create index file
+      actions.push({
+        type: 'add',
+        path: `${destination}/${path}/${name}/index.js`,
+        templateFile: `${templateRoot}/${template}/index.hbs`,
+      });
+
+      // Create Stories
+      actions.push({
+        type: 'add',
+        path: `${destination}/${path}/${name}/index.stories.js`,
+        templateFile: `${templateRoot}/${template}/index.stories.hbs`,
+      });
+
+      // Create StyleSheet
+      actions.push({
+        type: 'add',
+        path: `${destination}/${path}/${name}/${name}.scss`,
+        templateFile: `${templateRoot}/${template}/Styles.scss`,
+      })
+
+      // Create assets folder
+      actions.push({
+        type: 'add',
+        path: `${destination}/${path}/${name}/assets/foo.temp`,
+      });
+
+      // Create test file
+      actions.push({
+        type: 'add',
+        path: `${destination}/${path}/${name}/__tests__/index.js`,
+        templateFile: `${templateRoot}/${template}/__tests__/index.hbs`,
+      })
+
+      // Create snapshot file
+      actions.push({
+        type: 'add',
+        path: `${destination}/${path}/${name}/__tests__/snapshots/index.js`,
+        templateFile: `${templateRoot}/${template}/__tests__/snapshots/index.hbs`,
+      })
 
       return actions
     },
-  })
-}
+  });
+};
 
-module.exports = generator
+module.exports = generator;

@@ -1,0 +1,22 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import styles from './{{name}}.scss';
+
+const propTypes = {
+  /** Name of the component */
+  name: PropTypes.string.isRequired,
+};
+
+const defaultProps = {};
+
+const {{name}} = props => (
+  <div className={`${styles.container}`}>
+    {props.name}
+  </div>
+);
+
+{{name}}.defaultProps = defaultProps;
+{{name}}.propTypes = propTypes;
+
+export default {{name}};

@@ -9,44 +9,9 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <base href="/"/>
     <title>%NODE_ENV% - %PUBLIC_URL%</title>
-    <script>
-        /**
-         * Function that tells the React Native App that the page has loaded successfully
-         */
-        function waitForBridge() {
-            if (window.postMessage.length !== 1){
-                setTimeout(waitForBridge, 200);
-            } else {
-                window.postMessage(JSON.stringify({name: "didLoadSuccessfully"}))
-            }
-        }
-
-        /**
-         * Notify native once the page is loaded
-         */
-        window.onload = function() {
-            waitForBridge();
-        }
-
-        window.referralLoadedSuccessfully = function() {
-            console.log('referralLoadedSuccessfully')
-        }
-    </script>
-
 </head>
 <body class="home-default">
 <noscript>You need to enable JavaScript to run this app.</noscript>
 <div id="root"></div>
-<!--<script type="text/javascript" src="./referrals/main.js"></script>-->
-<style>
-    .home-default {
-        background: #000;
-        background-image: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMDEuMjYgMjk5Ljk5Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2NjYzt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPnRlczwvdGl0bGU+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMTUwLjY1LDMwMCwxOTIuNzksNjNjNDAuMTgsMCw1Mi44NCw0LjQxLDU0LjY3LDIyLjM4LDAsMCwyNy0xMCw0MC41NS0zMC40NUMyMzUsMzAuMzQsMTgxLjY3LDI5LjIzLDE4MS42NywyOS4yM0wxNTAuNTcsNjcuMWguMDdsLTMxLjEtMzcuODdTNjYuMjUsMzAuMywxMy4yMiw1NC44OEMyNi44LDc1LjI5LDUzLjc3LDg1LjM0LDUzLjc3LDg1LjM0YzEuODMtMTgsMTQuNS0yMi4zOCw1NC40LTIyLjQyWiIvPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTE1MC42MywxOC4yNmM0Mi44Ny0uMzMsOTIsNi42MywxNDIuMTksMjguNTMsNi43Mi0xMi4wOCw4LjQ0LTE3LjQyLDguNDQtMTcuNDJBNDEyLjQ2LDQxMi40NiwwLDAsMCwxNTAuNjMsMGgwQTQxMi40NSw0MTIuNDUsMCwwLDAsMCwyOS4zNiwxNDUuOTIsMTQ1LjkyLDAsMCwwLDguNDMsNDYuNzhDNTguNjcsMjQuODksMTA3Ljc1LDE3LjkzLDE1MC42MywxOC4yNloiLz48L3N2Zz4=);
-        background-size: 100px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-position-y: 200px;
-    }
-</style>
 </body>
 </html>
