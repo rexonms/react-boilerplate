@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+.avatar {
+  margin-right: 10px;
+}
+
+.details {
+  p {
+    margin: 0;
+  }
+}

@@ -5,9 +5,12 @@ import { withInfo } from '@storybook/addon-info';
 
 import {{name}} from './index';
 
-const stories = storiesOf('components/{{name}}', module);
-const buttonLabelOn = 'on';
-const buttonLabelOff = 'off';
+const stories = storiesOf('{{path}}/{{name}}', module);
+const props = {
+  buttonLabelOn: 'on',
+  buttonLabelOff:'off',
+}
+
 
 stories.addDecorator(withKnobs);
 stories.addDecorator(story => (story()));
@@ -22,8 +25,7 @@ buttonLabelOff="off"
 `)(() => {
 return (
   <{{name}}
-    buttonLabelOn="on"
-    buttonLabelOff="off"
+   {...props}
   />
 );
 }));

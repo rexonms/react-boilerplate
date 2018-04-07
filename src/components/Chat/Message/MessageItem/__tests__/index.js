@@ -2,15 +2,15 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import StatefulComponent from '../index';
-import styles from '../StatefulComponent.scss';
+import MessageItem from '../index';
+import styles from '../MessageItem.scss';
 
 export const props = {
   buttonLabelOn: "on",
   buttonLabelOff: "off",
 }
-describe('StatefulComponent Component', () => {
-  const wrapper = shallow(<StatefulComponent {...props} />);
+describe('MessageItem Component', () => {
+  const wrapper = shallow(<MessageItem {...props} />);
 
   it('renders with proper className', () => {
     expect(wrapper.exists(styles.container)).toBe(true);
