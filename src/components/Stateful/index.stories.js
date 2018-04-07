@@ -5,25 +5,25 @@ import { withInfo } from '@storybook/addon-info';
 
 import StatefulComponent from './index';
 
-const stories = storiesOf('Components/StatefulComponent', module);
+const stories = storiesOf('components/StatefulComponent', module);
+const buttonLabelOn = 'on';
+const buttonLabelOff = 'off';
+
 stories.addDecorator(withKnobs);
 stories.addDecorator(story => (story()));
 stories.add('StatefulComponent', withInfo(`
-  StatefulComponent
+  A Stateful Component example that toggles the bulb state based on user click event.
   ~~~js
-   <StatefulComponent
-      buttonText={buttonText}
-      beforeText="hello"
-      afterText="clicked"
-    />
+    <StatefulComponent
+      buttonLabelOn="on"
+      buttonLabelOff="off"
+    />)
   ~~~
 `)(() => {
-  const buttonText = 'Click Me';
   return (
     <StatefulComponent
-      buttonText={buttonText}
-      beforeText="hello"
-      afterText="clicked"
+      buttonLabelOn="on"
+      buttonLabelOff="off"
     />
   );
 }));

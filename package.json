@@ -56,7 +56,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js",
+    "test": "node scripts/test.js --env=jsdom",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
     "plop": "plop"
@@ -118,6 +118,8 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "file-loader": "^1.1.11",
     "inquirer-directory": "^2.1.0",
+    "jsdom": "11.7.0",
+    "jsdom-global": "3.0.2",
     "node-sass": "^4.7.2",
     "open-browser-webpack-plugin": "0.0.5",
     "plop": "^1.9.1",
@@ -132,6 +134,7 @@
     "postcss-simple-vars": "^4.1.0",
     "react-test-renderer": "^16.3.1",
     "sass-loader": "^6.0.7",
+    "sinon": "^4.5.0",
     "style-loader": "^0.19.0",
     "webpack-bundle-analyzer": "^2.11.1"
   }
