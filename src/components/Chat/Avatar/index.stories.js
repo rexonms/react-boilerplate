@@ -5,7 +5,7 @@ import { withInfo } from '@storybook/addon-info';
 
 import Avatar from './index';
 
-const stories = storiesOf('components/Avatar', module);
+const stories = storiesOf('components/Chat/Avatar', module);
 const imageUrl = 'https://place-hold.it/100'
 stories.addDecorator(withKnobs);
 stories.addDecorator(story => (story()));

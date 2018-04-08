@@ -5,7 +5,7 @@ import { withInfo } from '@storybook/addon-info';
 
 import Heading6 from './index';
 
-const stories = storiesOf('Components/Typography/H6', module);
+const stories = storiesOf('components/Typography/H6', module);
 stories.addDecorator(withKnobs);
 
 // Knobs as dynamic variables.

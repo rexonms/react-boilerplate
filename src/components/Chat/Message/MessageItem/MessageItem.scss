@@ -1,17 +1,21 @@
 .container {
+  border-bottom: 1px solid #eee;
+  width: 100%;
+}
+.inner {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 10px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid #eee;
+  padding: 20px 10px;
 }
 .avatar {
   margin-right: 10px;
 }
-
 .details {
   p {
     margin: 0;
   }
+}
+.container:last-child {
+  border-bottom: none;
 }

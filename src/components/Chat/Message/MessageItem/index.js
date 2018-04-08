@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './MessageItem.scss';
-import Avatar from '../../../Avatar/index';
+import Avatar from '../../Avatar/index';
 import Heading6 from '../../../Typography/H6/index';
 import Paragraph from '../../../Typography/Paragraph/index';
 
@@ -31,12 +31,14 @@ class MessageItem extends Component {
   render () {
     return (
       <div className={styles.container} onClick={this.onClickHandler}>
-        <div className={styles.avatar}>
-          <Avatar imageURL={this.props.avatarImageURL} />
-        </div>
-        <div className={styles.details}>
-          <Heading6 labelText={this.props.recipientName} />
-          <Paragraph label={this.props.lastMessage} size='small' />
+        <div className={styles.inner}>
+          <div className={styles.avatar}>
+            <Avatar imageURL={this.props.avatarImageURL} />
+          </div>
+          <div className={styles.details}>
+            <Heading6 labelText={this.props.recipientName} />
+            <Paragraph label={this.props.lastMessage} size='small' />
+          </div>
         </div>
       </div>
     )

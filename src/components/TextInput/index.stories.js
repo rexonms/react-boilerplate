@@ -5,7 +5,7 @@ import { withInfo } from '@storybook/addon-info';
 
 import TextInput from './index';
 
-const stories = storiesOf('Components/TextInput', module);
+const stories = storiesOf('components/TextInput', module);
 stories.addDecorator(withKnobs);
 
 // Knobs as dynamic variables.

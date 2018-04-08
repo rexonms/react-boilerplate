@@ -1,23 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, select } from '@storybook/addon-knobs/react';
+import { withKnobs } from '@storybook/addon-knobs/react';
 import { withInfo } from '@storybook/addon-info';
 
 import MessageList from './index';
 
-const stories = storiesOf('Components/Chat/MessageList', module);
-stories.addDecorator(withKnobs);
-
-// Knobs as dynamic variables.
-stories.addDecorator(story => (story()));
-
-stories.add('default', withInfo(`
-  Displays list of all the messages
-  ~~~js
-    <MessageList list={list} />
-  ~~~
-`)(() => {
-  const messages = [
+const stories = storiesOf('components/Chat/Message/MessageList', module);
+export const props = {
+  list: [
     {
       id: '1',
       avatarImageURL: 'http://dummyimage.com/mediumrectangle/111111/eeeeee',
@@ -41,10 +31,21 @@ stories.add('default', withInfo(`
       avatarImageURL: 'http://dummyimage.com/mediumrectangle/aaaaaa/eeeeee',
       recipientName: '',
       lastMessage: 'hola',
-    }
-  ]
-  return (
-    <MessageList list={messages} />
-  )
-}));
+    },
+  ],
+};
 
+
+stories.addDecorator(withKnobs);
+stories.addDecorator(story => (story()));
+stories.add('MessageList', withInfo(`
+  A Stateful Component example that toggles the bulb state based on user click event.
+~~~js
+~~~
+`)(() => {
+return (
+  <MessageList
+   list={props.list}
+  />
+);
+}));
