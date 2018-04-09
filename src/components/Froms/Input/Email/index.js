@@ -24,8 +24,9 @@ class InputEmail extends Component {
   }
   onBlurHandler() {
     if ( !validator.isEmail(this.state.value)) {
-      this.setState({ isValid: false });
+      return this.setState({ isValid: false });
     }
+    this.props.onBlur(this.state.value)
   }
   render() {
     return (
@@ -61,7 +62,9 @@ InputEmail.propTypes = {
   /** Message on error */
   errorMessage: PropTypes.string,
   /** onChangeHandler that updates the input box state */
-  onChangeHandler: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
+  /** onBlurHandler that updates the input box state */
+  onBlur: PropTypes.func.isRequired,
 }
 
 export default InputEmail;

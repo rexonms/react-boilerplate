@@ -1,7 +1,8 @@
-.home {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 50%;
+  flex-direction: column;
+  height: 80vh;
 }

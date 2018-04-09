@@ -1,10 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Switch, Route } from 'react-router-dom';
+import { ConnectedRouter, routerReducer, routerMiddleware, push } from 'react-router-redux'
+import { Route } from 'react-router';
+
+import createHistory from 'history/createBrowserHistory';
+
 import Loadable from 'react-loadable';
 
 import AppLoading from '../../components/AppLoading/';
 import './styles.scss';
+
+const history = createHistory();
 
 const loading = () => <AppLoading />;
 // const Header = Loadable({
@@ -12,10 +18,13 @@ const loading = () => <AppLoading />;
 //   loading,
 // });
 const Home = Loadable({
-  loader: () => import('./../Home'),
+  loader: () => import('./../Home/'),
   loading,
 });
-// const Award = Loadable({
+const Albums = Loadable({
+  loader: () => import('./../Albums/'),
+  loading,
+});// const Award = Loadable({
 //   loader: () => import('./../Award'),
 //   loading,
 // });
@@ -29,18 +38,19 @@ const Main = props => (
     {/*<Header />*/}
     <div className="page-container-outer">
         <React.Fragment>
-          <Switch location={props.location}>
-            <Route exact path="/" component={Home} />
-            {/*<Route path="/award" component={Award} />*/}
-            {/*<Route path="/leaderboard" component={Leaderboard} />*/}
-          </Switch>
+          <ConnectedRouter history={history}>
+            <div>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/albums" component={Albums} />
+            </div>
+          </ConnectedRouter>
         </React.Fragment>
     </div>
   </div>
 );
 
 Main.propTypes = {
-  location: PropTypes.shape().isRequired,
+  //location: PropTypes.shape().isRequired,
 };
 
 export default Main;

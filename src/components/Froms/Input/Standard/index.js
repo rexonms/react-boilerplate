@@ -28,6 +28,7 @@ class Input extends Component {
             name={this.props.label}
             value={this.state.value}
             onChange={this.onChangeHandler}
+            onBlur={this.props.onBlur(this.state.value)}
           />
         </label>
       </div>
@@ -44,8 +45,8 @@ Input.propTypes = {
   label: PropTypes.string.isRequired,
   /** Pre filled value for the input box, if applicable */
   value: PropTypes.string,
-  /** onChangeHandler that updates the input box state */
-  onChangeHandler: PropTypes.func.isRequired,
+  /** information that needs to be stored on user exits the input box **/
+  onBlur: PropTypes.func.isRequired,
 }
 
 export default Input;

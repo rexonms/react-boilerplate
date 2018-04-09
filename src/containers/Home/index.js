@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { getHomeData } from '../../redux/actions/Home';
+import { saveUserEmailAddressOnLocalHost } from './ducks/actions'
 import HomeInner from './HomeInner';
 
 const Home = props => (
@@ -10,7 +10,7 @@ const Home = props => (
 );
 
 const mapStateToProps = ({ home }) => ({ home });
-const mapDispatchToProps = dispatch => (bindActionCreators({ getHomeData }, dispatch));
+const mapDispatchToProps = dispatch => (bindActionCreators( { saveUserEmailAddressOnLocalHost }, dispatch));
 
 Home.defaultProps = {
   home: {},
@@ -18,7 +18,6 @@ Home.defaultProps = {
 
 Home.propTypes = {
   home: PropTypes.shape({}),
-  getHomeData: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

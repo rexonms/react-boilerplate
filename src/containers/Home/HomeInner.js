@@ -1,20 +1,33 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-
-import Title from '../../components/Title/';
-import Paragraph from '../../components/Typography/Paragraph/';
-// import './styles.scss';
+import Button from '../../components/Froms/Button/index';
+import Styles from './Home.scss';
+import InputEmail from '../../components/Froms/Input/Email/index';
 
 class HomeInner extends Component {
   constructor() {
     super();
     this.state = {};
+    this.onClickHandler = this.onClickHandler.bind(this);
   }
+  onClickHandler() {
+    this.props.saveUserEmailAddressOnLocalHost(this.state.email);
+  }
+
   render() {
-    const { translations } = this.props.home.data;
+    console.log(this.props)
     return (
-      <div className="home">
-       welcome
+      <div className={Styles.container}>
+        <InputEmail
+          label="Input your email"
+          value="rexonms@gamil.com"
+          onChange={() => {}}
+          onBlur={
+            (email) => {
+              this.setState({ email })}
+          }
+        />
+        <Button name="Submit" onClick={this.onClickHandler}/>
       </div>
     );
   }

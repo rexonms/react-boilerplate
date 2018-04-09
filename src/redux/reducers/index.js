@@ -1,15 +1,13 @@
-import { combineReducers } from 'redux';
-import { routerReducer } from 'react-router-redux';
-
 import home from './Home';
 import award from './Award';
 import leaderboard from './Leaderboard';
+import albums from './../../containers/Albums/ducks/reducers';
 
-const reducers = combineReducers({
+const reducers = {
   home,
   award,
   leaderboard,
-  routing: routerReducer,
-});
+  albums,
+};
 
 export default reducers;
