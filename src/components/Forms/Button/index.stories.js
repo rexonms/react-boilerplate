@@ -5,7 +5,7 @@ import { withInfo } from '@storybook/addon-info';
 
 import Button from './index';
 
-const stories = storiesOf('components/Froms/Button', module);
+const stories = storiesOf('components/Forms/Button', module);
 const nameText = 'Button';
 
 stories.addDecorator(withKnobs);

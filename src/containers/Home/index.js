@@ -8,7 +8,6 @@ import Styles from './Home.scss'
 import HeadingScript from '../../components/Typography/HeadingScript/index';
 import InputEmail from '../../components/Froms/Input/Email/index';
 import Button from '../../components/Froms/Button/index';
-import { goToMessageListPage } from './ducks/'
 
 class Home extends Component {
   constructor() {
@@ -44,7 +43,7 @@ class Home extends Component {
 }
 
 const mapStateToProps = ({ home }) => ({ home });
-const mapDispatchToProps = dispatch => (bindActionCreators( { goToMessageListPage }, dispatch));
+const mapDispatchToProps = dispatch => (bindActionCreators(actions, dispatch));
 
 Home.defaultProps = {
   home: {},

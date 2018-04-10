@@ -12,12 +12,13 @@ stories.addDecorator(story => (story()));
 stories.add('Avatar', withInfo(`
   Component
   ~~~js
-    <Avatar imageURL=imageUrl />)
+    <Avatar imageURL=imageUrl imageAltText="imageAltText"/>)
   ~~~
 `)(() => {
   return (
     <Avatar
       imageURL={imageUrl}
+      imageAltText="imageAltText"
     />
   );
 }));

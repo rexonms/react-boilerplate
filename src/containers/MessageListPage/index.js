@@ -13,11 +13,15 @@ const defaultProps = {};
 
 class MessageListPage extends Component {
   constructor (props) {
-    super(props)
-    this.state = {}
+    super(props);
+    this.state = {};
+    this.onClickHandler = this.onClickHandler.bind(this);
   }
   componentDidMount() {
     this.props.getMessageListPageData()
+  }
+  onClickHandler(recipientEmail) {
+    this.props.gotoMessageItemPageFromMessageListPage(recipientEmail)
   }
   render () {
     console.log(this.props.messages)
@@ -33,7 +37,10 @@ class MessageListPage extends Component {
          <Heading6 labelText={messages.user.email} />
        </div>
         <div className={Styles.messages}>
-          <MessageList list={messages.data.dbData.friendsList}/>
+          <MessageList
+            list={messages.data.dbData.friendsList}
+            onClick={this.onClickHandler}
+          />
         </div>
       </div>
     )

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './{{name}}.scss';
+import styles from './MessageItemPage.scss';
 
 const defaultProps = {
   bulbState: true,
@@ -15,7 +15,7 @@ const propTypes = {
   buttonLabelOff: PropTypes.string,
 };
 
-class {{name}} extends Component {
+class MessageItemPage extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -48,7 +48,7 @@ class {{name}} extends Component {
   }
 };
 
-{{name}}.defaultProps = defaultProps;
-{{name}}.propTypes = propTypes;
+MessageItemPage.defaultProps = defaultProps;
+MessageItemPage.propTypes = propTypes;
 
-export default {{name}};
+export default MessageItemPage;

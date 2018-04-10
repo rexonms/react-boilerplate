@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50vw;
+  height: 50vh;
+  border-radius: 5px;
+  background: rgba(255,255,255,.9);
+  border: 1px solid #eee;
+  padding: 10px;
+}
+.image {
+  width: 100%;
+  height: 80%;
+}
+.bulb {
+  width: 100%;
+  height: 90%;
+  margin-bottom: 10%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.bulbOn {
+  background-image: url('./assets/bulbOn.svg')
+}
+.bulbOff {
+  background-image: url('./assets/bulbOff.svg')
+}
+.button {
+  margin: auto;
+  padding: 10px 40px;
+  background: #ccc;
+  border: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  min-width: 150px;
+  box-shadow: 0 0 black;
+}
+.button:focus {
+  outline: none;
+}
