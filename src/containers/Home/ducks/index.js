@@ -3,20 +3,19 @@ import { setValueInLocalStorage, LOCAL_STORAGE_EMAIL_KEY } from '../../../utils/
 import { setUserEmailAddressInMessageListPage } from '../../MessageListPage/ducks/index';
 
 // Actions
-const GO_TO_MESSAGE_LIST_PAGE = 'app/messageListPage/GO_TO_MESSAGE_LIST_PAGE';
 
 // Reducers
-export default function (state = {}, action ={}) {
+export const reducers = (state = {}, action ={})  => {
   switch (action.type) {
-    case GO_TO_MESSAGE_LIST_PAGE:
-      return Object.assign({}, state);
+    // case GO_TO_MESSAGE_LIST_PAGE:
+    //   return Object.assign({}, state);
     default:
       return state;
   }
 }
 
 // Action Creator
-export function goToMessageListPage(email) {
+export const goToMessageListPage =(email) => {
   return dispatch => {
     // first save the email on local host
     setValueInLocalStorage(LOCAL_STORAGE_EMAIL_KEY, email);
@@ -26,3 +25,6 @@ export function goToMessageListPage(email) {
     dispatch(push('/messages'));
   }
 }
+
+
+export default reducers;

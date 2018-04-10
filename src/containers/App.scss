@@ -1,12 +1,13 @@
 .container {
   width: 30vw;
   max-width: 400px;
-  min-width: 250px;
+  min-width: 300px;
   height: 50vh;
-  max-height: 600px;
-  min-height: 400px;
+  max-height: 700px;
+  min-height: 550px;
   background-color: #f8f8f8;
   border: 1px solid #eee;
   border-radius: 10px;
-  margin: 10vh auto 0 auto;
+  margin: 5vh auto 0 auto;
+  overflow: scroll;
 }

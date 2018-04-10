@@ -4,3 +4,14 @@
   align-items: flex-start;
   flex-wrap: wrap;
 }
+.header {
+  background-color: #eee;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
