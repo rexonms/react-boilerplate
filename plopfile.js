@@ -1,6 +1,6 @@
 const promptDirectory = require('inquirer-directory');
 const fs = require('fs');
-const getActions = require('./plop/actions/actions')
+const getActions = require('./plop/actions/actions');
 
 const getAllFilesOfPlopTemplates = rootPath => fs.readdirSync(rootPath).map(file => file);
 const templateRoot = './plop/plopTemplates';
@@ -27,7 +27,7 @@ const generator = (plop) => {
         validate: (value) => {
           if ((/.+/).test(value)) { return true; }
           return 'Project name is required';
-        }
+        },
       },
       {
         type: 'list',
@@ -38,31 +38,31 @@ const generator = (plop) => {
     ],
     actions(userResponse) {
       console.log('userResponse*****', userResponse);
-      let { name } = userResponse;
+      const { name } = userResponse;
+      const response = userResponse;
       let actions = [];
       const commonActionName = ['index', 'story', 'style', 'test', 'snapshot'];
       const StatefulComponent = ['assetBulbOn', 'assetBulbOff'];
       const StatelessComponent = ['emptyAsset'];
       StatefulComponent.push(...commonActionName);
       StatelessComponent.push(...commonActionName);
-      console.log('StatefulComponent', StatefulComponent)
 
       // Inject additional information to the usersResponse
-      userResponse.templateRoot = templateRoot;
-      userResponse.destination = './src';
-      userResponse.name = `${name.charAt(0).toUpperCase()}${name.slice(1)}`; // Making sure the name is always Initial Cap
+      response.templateRoot = templateRoot;
+      response.destination = './src';
+      response.name = `${name.charAt(0).toUpperCase()}${name.slice(1)}`; // Making sure the name is always Initial Cap
 
-      switch (userResponse.template) {
+      switch (response.template) {
         case TEMPLATE_TYPES.StatefulComponent:
-          actions = StatefulComponent
+          actions = StatefulComponent;
           break;
         case TEMPLATE_TYPES.StatelessComponent:
-          actions = StatelessComponent
+          actions = StatelessComponent;
           break;
         default:
-          console.log(`Template not found for ${userResponse.template}`);
+          console.log(`Template not found for ${response.template}`);
       }
-      return actions.map(actionName => getActions(actionName, userResponse));
+      return actions.map(actionName => getActions(actionName, response));
     },
   });
 };

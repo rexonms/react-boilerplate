@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as actions  from './ducks/';
+import * as actions from './ducks/';
 
-import Styles from './Home.scss'
+import Styles from './Home.scss';
 import HeadingScript from '../../components/Typography/HeadingScript/index';
-import InputEmail from '../../components/Froms/Input/Email/index';
-import Button from '../../components/Froms/Button/index';
+import InputEmail from '../../components/Forms/Input/Email/index';
+import Button from '../../components/Forms/Button/index';
 
 class Home extends Component {
   constructor() {
@@ -17,12 +17,12 @@ class Home extends Component {
     this.onClickHandler = this.onClickHandler.bind(this);
   }
   onClickHandler() {
-    if(this.emailObj.valid) {
-      this.props.goToMessageListPage(this.emailObj.email)
+    if (this.emailObj.valid) {
+      this.props.goToMessageListPage(this.emailObj.email);
     }
   }
   onBlurHandler(emailObj) {
-    this.emailObj = emailObj
+    this.emailObj = emailObj;
   }
   render() {
     return (

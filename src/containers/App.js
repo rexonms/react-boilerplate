@@ -26,12 +26,12 @@ const MessageItemPage = Loadable({
 
 initGoogleAnalytics()
 
-const App = props => (
+const App = () => (
   <div className={Styles.container}>
     <ConnectedRouter history={history}>
       <Switch>
-        <Route exact path="/" component={Home}/>
-        <Route exact path="/messages" component={MessageListPage}/>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/messages" component={MessageListPage} />
         <Route path="/messages/:recipientEmail" component={MessageItemPage} />
       </Switch>
     </ConnectedRouter>

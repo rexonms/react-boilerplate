@@ -4,11 +4,11 @@ import { Provider } from 'react-redux';
 
 import store from './store';
 import App from './containers/App';
-import './styles/styles.scss';
+import './styles/global.scss';
 
 ReactDOM.render(
   <Provider store={store}>
-    <App/>
+    <App />
   </Provider>,
   document.getElementById('root'),
 );

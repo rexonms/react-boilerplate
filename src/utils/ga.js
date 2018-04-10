@@ -5,9 +5,7 @@ const userId = 'userID--getFromStore';
 export const initGoogleAnalytics = () => {
   visitor = ua(process.env.GOOGLE_ANALYTICS_ID);
 };
-
 export const setAnalyticsPageView = pageName => visitor.pageview({ dp: `/${pageName}`, dt: pageName, dh: window.location.href }).send();
-
 export const setAnalyticsEvent = (event) => {
   if (typeof (event.func) !== 'function') {
     // console.warn('Must supply function that needs to be executed');

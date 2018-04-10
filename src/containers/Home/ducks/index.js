@@ -5,7 +5,7 @@ import { setUserEmailAddressInMessageListPage } from '../../MessageListPage/duck
 // Actions
 
 // Reducers
-export const reducers = (state = {}, action ={})  => {
+const reducers = (state = {}, action = {})  => {
   switch (action.type) {
     // case GO_TO_MESSAGE_LIST_PAGE:
     //   return Object.assign({}, state);

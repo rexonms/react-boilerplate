@@ -1,27 +1,3 @@
-# Containers
-    - Navigation
-        - Current
-        - Back
-    - Home
-        - List of Contacts
-            - Contact
-                - Photo
-                - Status
-                - Last message
-                - onClick Handler
-    - Chat
-        - Chat Text List
-            - Chat Text
-                - Who Sent it
-                - What was sent
-                _ When it was sent
-        - Text Input Box
-            - Disable Scripts
-        - Send Button
-            - On Click
-                - Sanatize
-                - Send to server
-        
 #### Home
 #### 
 # Scripts

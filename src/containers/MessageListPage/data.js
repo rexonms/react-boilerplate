@@ -2,35 +2,35 @@ const messengerListPageData = {
   translations: {},
   dbData: {
     friendsList: [
-        {
-          id: '1',
-          avatarImageURL: 'http://dummyimage.com/mediumrectangle/111111/eeeeee',
-          recipientName: 'John Smith',
-          lastMessage: 'Where have you been?',
-          email: 'john@mail.com',
-        },
-        {
-          id: '2',
-          avatarImageURL: 'http://dummyimage.com/mediumrectangle/333333/eeeeee',
-          recipientName: 'Jenny',
-          lastMessage: 'And then there this time when I was thing of lots of stuff. A single line field is used when the input anticipated by the user is a single line of text as opposed to a paragraph.',
-          email: 'jenny@mail.com',
+      {
+        id: '1',
+        avatarImageURL: 'http://dummyimage.com/mediumrectangle/111111/eeeeee',
+        recipientName: 'John Smith',
+        lastMessage: 'Where have you been?',
+        email: 'john@mail.com',
+      },
+      {
+        id: '2',
+        avatarImageURL: 'http://dummyimage.com/mediumrectangle/333333/eeeeee',
+        recipientName: 'Jenny',
+        lastMessage: 'And then there this time when I was thing of lots of stuff. A single line field is used when the input anticipated by the user is a single line of text as opposed to a paragraph.',
+        email: 'jenny@mail.com',
 
-        },
-        {
-          id: '3',
-          avatarImageURL: 'http://dummyimage.com/mediumrectangle/cccccc/eeeeee',
-          recipientName: 'Mr. Jhonothan Goldsmith',
-          lastMessage: 'yt',
-          email: 'Jhonothan@mail.com',
-        },
-        {
-          id: '4',
-          avatarImageURL: 'http://dummyimage.com/mediumrectangle/222222/eeeeee',
-          recipientName: 'Ron',
-          lastMessage: 'hola',
-          email: 'Ron@mail.com',
-        },
+      },
+      {
+        id: '3',
+        avatarImageURL: 'http://dummyimage.com/mediumrectangle/cccccc/eeeeee',
+        recipientName: 'Mr. Jhonothan Goldsmith',
+        lastMessage: 'yt',
+        email: 'Jhonothan@mail.com',
+      },
+      {
+        id: '4',
+        avatarImageURL: 'http://dummyimage.com/mediumrectangle/222222/eeeeee',
+        recipientName: 'Ron',
+        lastMessage: 'hola',
+        email: 'Ron@mail.com',
+      },
       {
         id: '5',
         avatarImageURL: 'http://dummyimage.com/mediumrectangle/bbbbbbb/eeeeee',
@@ -59,7 +59,7 @@ const messengerListPageData = {
         lastMessage: 'And that was all',
         email: 'Danny@mail.com',
       },
-      ],
+    ],
   }
 }
 
