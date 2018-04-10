@@ -13,12 +13,12 @@ stories.addDecorator(story => (story()));
 stories.add('HeadingScript', withInfo(`
   Component
   ~~~js
-    <HeadingScript name='HeadingScript' />)
+    <HeadingScript text='HeadingScript' />)
   ~~~
 `)(() => {
   return (
     <HeadingScript
-      name={nameText}
+      text='Heading Script'
     />
   );
 }));
