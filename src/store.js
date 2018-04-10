@@ -13,13 +13,14 @@ const reducer = combineReducers({
 export const history = createHistory({ queryKey: false });
 
 const store = createStore(
-  reducer, undefined,
+  reducer,
+  undefined,
   compose(
     applyMiddleware(
       routerMiddleware(history),
       thunk,
     ),
     window.devToolsExtension ? window.devToolsExtension() : f => f,
-));
+    ));
 
 export default store;

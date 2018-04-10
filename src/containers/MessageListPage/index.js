@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import styles from './Albums.scss';
+import styles from './MessageListPage.scss';
 
 const propTypes = {};
 const defaultProps = {};
 
-class Albums extends Component {
+class MessageListPage extends Component {
   constructor (props) {
     super(props)
     this.state = {}
@@ -17,15 +17,15 @@ class Albums extends Component {
   render () {
     return (
       <div className={styles.container}>
-        <p>Here</p>
+        <p>{this.props.messages.email}</p>
       </div>
     )
   }
 };
-const mapStateToProps = ({ albums }) => ({ albums });
+const mapStateToProps = ({ messages }) => ({ messages });
 const mapDispatchToProps = dispatch => (bindActionCreators({ }, dispatch));
 
-Albums.defaultProps = defaultProps;
-Albums.propTypes = propTypes;
+MessageListPage.defaultProps = defaultProps;
+MessageListPage.propTypes = propTypes;
 
-export default connect(mapStateToProps, mapDispatchToProps)(Albums);
+export default connect(mapStateToProps, mapDispatchToProps)(MessageListPage);

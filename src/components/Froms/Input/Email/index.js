@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import validator from 'validator';
 
-import styles from '../Input.scss';
+import Styles from '../Input.scss';
 
 class InputEmail extends Component {
   constructor(props) {
@@ -23,25 +23,29 @@ class InputEmail extends Component {
     });
   }
   onBlurHandler() {
-    if ( !validator.isEmail(this.state.value)) {
-      return this.setState({ isValid: false });
+    const emailIsValid = validator.isEmail(this.state.value)
+    if (!emailIsValid) {
+      this.setState({ isValid: false });
     }
-    this.props.onBlur(this.state.value)
+    this.props.onBlur({
+      email: this.state.value,
+      valid: emailIsValid,
+    })
   }
   render() {
     return (
-      <div className={styles.container}>
-        <label htmlFor={this.props.label} className={styles.label}>
+      <div className={Styles.container}>
+        <label htmlFor={this.props.label} className={Styles.label}>
           {this.props.label}
           <input
-            className={!this.state.isValid ? styles.inputError : ''}
+            className={!this.state.isValid ? Styles.inputError : ''}
             name={this.props.label}
             value={this.state.value}
             onChange={this.onChangeHandler}
             onBlur={this.onBlurHandler}
           />
         </label>
-        <div className={styles.error}>
+        <div className={Styles.error}>
           {!this.state.isValid && this.props.errorMessage}
         </div>
       </div>
@@ -51,6 +55,7 @@ class InputEmail extends Component {
 
 InputEmail.defaultProps = {
   value: '',
+  onChange: () => {},
   errorMessage: 'Invalid Email address',
 }
 
@@ -62,7 +67,7 @@ InputEmail.propTypes = {
   /** Message on error */
   errorMessage: PropTypes.string,
   /** onChangeHandler that updates the input box state */
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
   /** onBlurHandler that updates the input box state */
   onBlur: PropTypes.func.isRequired,
 }

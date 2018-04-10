@@ -3,4 +3,10 @@
   background-color: #ddd;
   color: #333;
   text-align: center;
+  width: 100%;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.container:focus {
+  outline: none;
 }

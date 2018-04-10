@@ -1,16 +1,50 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { saveUserEmailAddressOnLocalHost } from './ducks/actions'
-import HomeInner from './HomeInner';
+import * as actions  from './ducks/';
 
-const Home = props => (
-    <HomeInner {...props} />
-);
+import Styles from './Home.scss'
+import HeadingScript from '../../components/Typography/HeadingScript/index';
+import InputEmail from '../../components/Froms/Input/Email/index';
+import Button from '../../components/Froms/Button/index';
+import { goToMessageListPage } from './ducks/'
+
+class Home extends Component {
+  constructor() {
+    super();
+    this.emailObj = {};
+    this.onBlurHandler = this.onBlurHandler.bind(this);
+    this.onClickHandler = this.onClickHandler.bind(this);
+  }
+  onClickHandler() {
+    if(this.emailObj.valid) {
+      this.props.goToMessageListPage(this.emailObj.email)
+    }
+  }
+  onBlurHandler(emailObj) {
+    this.emailObj = emailObj
+  }
+  render() {
+    return (
+      <div className={Styles.container}>
+        <HeadingScript text="Welcome"/>
+        <div className={Styles.form}>
+          <InputEmail
+            label="Your Email Address"
+            value="rexonms@gmail.com"
+            onBlur={(emailObj) => this.onBlurHandler(emailObj)}
+          />
+          <Button onClick={() => this.onClickHandler()} label="Start"/>
+        </div>
+      </div>
+    )
+  }
+
+}
 
 const mapStateToProps = ({ home }) => ({ home });
-const mapDispatchToProps = dispatch => (bindActionCreators( { saveUserEmailAddressOnLocalHost }, dispatch));
+const mapDispatchToProps = dispatch => (bindActionCreators( { goToMessageListPage }, dispatch));
 
 Home.defaultProps = {
   home: {},

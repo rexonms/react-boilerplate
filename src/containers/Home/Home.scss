@@ -1,8 +1,6 @@
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
-  height: 80vh;
+  padding-top: 20px;
+}
+.form {
+  padding: 60px 20px;
 }

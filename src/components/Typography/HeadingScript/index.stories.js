@@ -3,22 +3,22 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs/react';
 import { withInfo } from '@storybook/addon-info';
 
-import Button from './index';
+import HeadingScript from './index';
 
-const stories = storiesOf('components/Froms/Button', module);
-const nameText = 'Button';
+const stories = storiesOf('components/Typography/HeadingScript', module);
+const nameText = 'HeadingScript';
 
 stories.addDecorator(withKnobs);
 stories.addDecorator(story => (story()));
-stories.add('Button', withInfo(`
+stories.add('HeadingScript', withInfo(`
   Component
   ~~~js
-    <Button label='Button' />)
+    <HeadingScript name='HeadingScript' />)
   ~~~
 `)(() => {
   return (
-    <Button
-      label={nameText}
+    <HeadingScript
+      name={nameText}
     />
   );
 }));

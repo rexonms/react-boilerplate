@@ -1,13 +1,9 @@
-import home from './Home';
-import award from './Award';
-import leaderboard from './Leaderboard';
-import albums from './../../containers/Albums/ducks/reducers';
+import home from './../../containers/Home/ducks/index'
+import messages from './../../containers/MessageListPage/ducks/'
 
 const reducers = {
   home,
-  award,
-  leaderboard,
-  albums,
+  messages,
 };
 
 export default reducers;

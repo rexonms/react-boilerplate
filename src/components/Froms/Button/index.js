@@ -5,7 +5,7 @@ import styles from './Button.scss';
 
 const propTypes = {
   /** Name of the component */
-  name: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
   onClick: PropTypes.func.isRequired,
 };
 
@@ -13,7 +13,7 @@ const defaultProps = {};
 
 const Button = props => (
   <button className={styles.container} onClick={props.onClick}>
-    {props.name}
+    {props.label}
   </button>
 );
 
