@@ -1,12 +1,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import {{name}} from '../index';
-import Styles from '../{{name}}.scss';
+import ChatRoomList from '../index';
+import Styles from '../ChatRoomList.scss';
 
-describe('{{name}} Component', () => {
+describe('ChatRoomList Component', () => {
   const name = 'foo';
-  const wrapper = shallow(<{{name}} name={name} />);
+  const wrapper = shallow(<ChatRoomList name={name} />);
 
   it('renders with proper className', () => {
     expect(wrapper.exists(Styles.container)).toBe(true);

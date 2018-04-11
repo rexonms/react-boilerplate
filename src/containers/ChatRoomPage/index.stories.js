@@ -15,7 +15,7 @@ export const props = {
 stories.addDecorator(withKnobs);
 stories.addDecorator(story => (story()));
 stories.add('ChatRoomPage', withInfo(`
-  A Stateful Component example that toggles the bulb state based on user click event.
+  A Stateful Component example that toggles the bulb state based on CHAT_BOX_USER click event.
 ~~~js
 <ChatRoomPage
 buttonLabelOn="on"

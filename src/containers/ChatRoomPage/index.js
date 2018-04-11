@@ -17,7 +17,7 @@ const propTypes = {
   buttonLabelOff: PropTypes.string,
 };
 
-class ChatRoomPage extends Component {
+export class ChatRoomPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,6 +26,8 @@ class ChatRoomPage extends Component {
     this.onClickHandler = this.onClickHandler.bind(this);
     this.getBulbClass = this.getBulbClass.bind(this);
     this.getButtonLabel = this.getButtonLabel.bind(this);
+  }
+  componentDidMount() {
   }
   onClickHandler() {
     this.setState({

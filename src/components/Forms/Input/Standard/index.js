@@ -45,7 +45,7 @@ Input.propTypes = {
   label: PropTypes.string.isRequired,
   /** Pre filled value for the input box, if applicable */
   value: PropTypes.string,
-  /** information that needs to be stored on user exits the input box **/
+  /** information that needs to be stored on CHAT_BOX_USER exits the input box **/
   onBlur: PropTypes.func.isRequired,
 }
 

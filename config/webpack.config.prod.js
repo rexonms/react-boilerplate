@@ -20,7 +20,7 @@ const localIdentName = '[name]__[local]___[hash:base64:5]';
 const publicPath = '/'; // paths.servedPath;
 // Some apps do not use client-side routing with pushState.
 // For these, "homepage" can be set to "." to enable relative asset paths.
-const shouldUseRelativeAssetPaths = publicPath === './';
+const shouldCHAT_BOX_USERelativeAssetPaths = publicPath === './';
 // Source maps are resource heavy and can cause out of memory issue for large source files.
 const shouldUseSourceMap = process.env.GENERATE_SOURCEMAP !== 'false';
 // `publicUrl` is just like `publicPath`, but we will provide it to our app
@@ -43,7 +43,7 @@ const cssFilename = 'static/css/[name].[contenthash:8].css';
 // (See https://github.com/webpack-contrib/extract-text-webpack-plugin/issues/27)
 // However, our output is structured with css, js and media folders.
 // To have this structure working with relative paths, we have to use custom options.
-const extractTextPluginOptions = shouldUseRelativeAssetPaths
+const extractTextPluginOptions = shouldCHAT_BOX_USERelativeAssetPaths
   ? // Making sure that the publicPath goes back to to build folder.
   { publicPath: Array(cssFilename.split('/').length).join('../') }
   : {};
@@ -96,7 +96,7 @@ module.exports = {
       'react-native': 'react-native-web',
     },
     plugins: [
-      // Prevents users from importing files from outside of src/ (or node_modules/).
+      // Prevents CHAT_BOX_USERs from importing files from outside of src/ (or node_modules/).
       // This often causes confusion because we only process files within src/ with babel.
       // To fix this, we prevent you from importing files out of src/ -- if you'd like to,
       // please link the files into your node_modules/ and let module-resolution kick in.
@@ -345,7 +345,7 @@ module.exports = {
     }),
     // Moment.js is an extremely popular library that bundles large locale files
     // by default due to how Webpack interprets its code. This is a practical
-    // solution that requires the user to opt into importing specific locales.
+    // solution that requires the CHAT_BOX_USER to opt into importing specific locales.
     // https://github.com/jmblog/how-to-optimize-momentjs-with-webpack
     // You can remove this if you don't use Moment.js:
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),

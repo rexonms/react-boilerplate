@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './{{name}}.scss';
+import Styles from './{{name}}.scss';
 
 const propTypes = {
   /** Name of the component */
@@ -11,7 +11,7 @@ const propTypes = {
 const defaultProps = {};
 
 const {{name}} = props => (
-  <div className={`${styles.container}`}>
+  <div className={`${Styles.container}`}>
     {props.name}
   </div>
 );

@@ -22,7 +22,7 @@ export const props = {
       avatarImageURL: 'http://dummyimage.com/mediumrectangle/333333/eeeeee',
       imageAltText: 'Jenny Smith',
       recipientName: 'Jenny',
-      lastMessage: 'And then there this time when I was thing of lots of stuff. A single line field is used when the input anticipated by the user is a single line of text as opposed to a paragraph.',
+      lastMessage: 'And then there this time when I was thing of lots of stuff. A single line field is used when the input anticipated by the CHAT_BOX_USER is a single line of text as opposed to a paragraph.',
       email: 'Jenny.smith@gmail.com',
     },
     {
@@ -48,7 +48,7 @@ export const props = {
 stories.addDecorator(withKnobs);
 stories.addDecorator(story => (story()));
 stories.add('MessageList', withInfo(`
-  A Stateful Component example that toggles the bulb state based on user click event.
+  A Stateful Component example that toggles the bulb state based on CHAT_BOX_USER click event.
 ~~~js
 ~~~
 `)(() => {

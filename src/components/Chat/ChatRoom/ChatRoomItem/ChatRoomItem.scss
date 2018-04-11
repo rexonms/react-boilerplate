@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.message {
+  padding: 10px;
+  border-radius: 20px;
+  p {
+    margin: 0;
+    font-size: $fontSizeSmall;
+  }
+}
+.thumbnail {
+  margin-right: 5px;
+  div {
+    width: 30px;
+    height: 30px;
+  }
+}
+.user {
+  background: #ccc;
+}
+.friend {
+  width: 80vw;
+  background: #eee;
+}

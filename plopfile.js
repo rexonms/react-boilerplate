@@ -36,10 +36,10 @@ const generator = (plop) => {
         choices: getAllFilesOfPlopTemplates(templateRoot),
       },
     ],
-    actions(userResponse) {
-      console.log('userResponse*****', userResponse);
-      const { name } = userResponse;
-      const response = userResponse;
+    actions(CHAT_BOX_USERResponse) {
+      console.log('CHAT_BOX_USERResponse*****', CHAT_BOX_USERResponse);
+      const { name } = CHAT_BOX_USERResponse;
+      const response = CHAT_BOX_USERResponse;
       let actions = [];
       const commonActionName = ['index', 'story', 'style', 'test', 'snapshot'];
       const StatefulComponent = ['assetBulbOn', 'assetBulbOff'];
@@ -47,7 +47,7 @@ const generator = (plop) => {
       StatefulComponent.push(...commonActionName);
       StatelessComponent.push(...commonActionName);
 
-      // Inject additional information to the usersResponse
+      // Inject additional information to the CHAT_BOX_USERsResponse
       response.templateRoot = templateRoot;
       response.destination = './src';
       response.name = `${name.charAt(0).toUpperCase()}${name.slice(1)}`; // Making sure the name is always Initial Cap

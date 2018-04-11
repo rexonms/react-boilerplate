@@ -22,7 +22,7 @@ module.exports = {
         // This rule struggles with flow and class properties
         'react/sort-comp': 0,
         // ignore linebreak style. the CRLF / LF endings wont matter
-        // if a windows user correctly converts CRLF to LF upon commits otherwise
+        // if a windows CHAT_BOX_USER correctly converts CRLF to LF upon commits otherwise
         // there are errors every line.
         'linebreak-style': 0,
     },

@@ -12,7 +12,7 @@ stories.addDecorator(withKnobs);
 stories.addDecorator(story => (story()));
 
 stories.add('TextInput', withInfo(`
-  Text fields enable the user to interact with and input data. A single line field is used when the input anticipated by the user is a single line of text as opposed to a paragraph.
+  Text fields enable the CHAT_BOX_USER to interact with and input data. A single line field is used when the input anticipated by the CHAT_BOX_USER is a single line of text as opposed to a paragraph.
   ~~~js
     <TextInput id="input-story" labelText="standard input"/>
   ~~~

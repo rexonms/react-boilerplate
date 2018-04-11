@@ -1,11 +1,11 @@
-const getActions = (actionName, userResponse) => {
-  const { destination } = userResponse;
-  const { path } = userResponse;
-  const { name } = userResponse;
-  const { templateRoot } = userResponse;
-  const { template } = userResponse;
+const getActions = (actionName, CHAT_BOX_USERResponse) => {
+  const { destination } = CHAT_BOX_USERResponse;
+  const { path } = CHAT_BOX_USERResponse;
+  const { name } = CHAT_BOX_USERResponse;
+  const { templateRoot } = CHAT_BOX_USERResponse;
+  const { template } = CHAT_BOX_USERResponse;
   console.log('actionName', actionName);
-  console.log('userResponse', userResponse);
+  console.log('CHAT_BOX_USERResponse', CHAT_BOX_USERResponse);
 
   const actions = {
     index: {

@@ -1,0 +1,13 @@
+.container {
+}
+.content {
+  display: flex;
+  width: 100vw;
+  margin-bottom: 10px;
+}
+.user {
+  justify-content: flex-end;
+}
+.friend {
+  justify-content: flex-start;
+}
