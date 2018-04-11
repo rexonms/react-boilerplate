@@ -31,7 +31,6 @@ class MessageListPage extends Component {
     this.props.goToMessageItemPageFromMessageListPage(recipientEmail);
   }
   render() {
-    console.log(this.props.messages);
     if (!this.props.messages.data) {
       return (
         <LoadingBars />

@@ -6,13 +6,13 @@ const propTypes = {};
 
 const defaultProps = {};
 
-const LoadingBars = props => (
+const LoadingBars = () => (
   <div className={Styles.spinner}>
-    <div></div>
-    <div className={Styles.rect2}></div>
-    <div className={Styles.rect3}></div>
-    <div className={Styles.rect4}></div>
-    <div className={Styles.rect5}></div>
+    <div />
+    <div className={Styles.rect2} />
+    <div className={Styles.rect3} />
+    <div className={Styles.rect4} />
+    <div className={Styles.rect5} />
   </div>
 );
 

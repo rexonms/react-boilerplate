@@ -14,7 +14,7 @@ const defaultProps = {};
 
 const Avatar = props => (
   <div className={`${styles.container}`}>
-    <img src={props.imageURL} alt={props.imageAltText}/>
+    <img src={props.imageURL} alt={props.imageAltText} />
   </div>
 );
 

@@ -16,7 +16,7 @@ const propTypes = {
     /** Last message sent by recipient */
     lastMessage: PropTypes.string.isRequired,
   })).isRequired,
-  /** Passing the onClick function to parent **/
+  /** Passing the onClick function to parent */
   onClick: PropTypes.func.isRequired,
 };
 
@@ -24,15 +24,15 @@ const defaultProps = {
 };
 
 class MessageList extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {}
-    this.onClickHandler = this.onClickHandler.bind(this)
+  constructor(props) {
+    super(props);
+    this.state = {};
+    this.onClickHandler = this.onClickHandler.bind(this);
   }
-  onClickHandler(email){
-    this.props.onClick(email)
+  onClickHandler(email) {
+    this.props.onClick(email);
   }
-  render () {
+  render() {
     return (
       <div className={styles.container}>
         {this.props.list.map(item => (
@@ -47,9 +47,9 @@ class MessageList extends Component {
           />
         ))}
       </div>
-    )
+    );
   }
-};
+}
 
 MessageList.defaultProps = defaultProps;
 MessageList.propTypes = propTypes;

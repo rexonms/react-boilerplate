@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './MessageItemPage.scss';
+import styles from './Test.scss';
 
 const defaultProps = {
   bulbState: true,
@@ -9,7 +9,7 @@ const defaultProps = {
   buttonLabelOff: 'On',
 };
 const propTypes = {
-  /** The default state of the bulb */
+  /** Default state of the light bulb */
   bulbState: PropTypes.bool,
   /** Button label when bulb is turned on */
   buttonLabelOn: PropTypes.string,
@@ -17,7 +17,7 @@ const propTypes = {
   buttonLabelOff: PropTypes.string,
 };
 
-class MessageItemPage extends Component {
+class Test extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -55,7 +55,7 @@ class MessageItemPage extends Component {
   }
 }
 
-MessageItemPage.defaultProps = defaultProps;
-MessageItemPage.propTypes = propTypes;
+Test.defaultProps = defaultProps;
+Test.propTypes = propTypes;
 
-export default MessageItemPage;
+export default Test;

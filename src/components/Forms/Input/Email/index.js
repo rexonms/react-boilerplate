@@ -23,14 +23,14 @@ class InputEmail extends Component {
     });
   }
   onBlurHandler() {
-    const emailIsValid = validator.isEmail(this.state.value)
+    const emailIsValid = validator.isEmail(this.state.value);
     if (!emailIsValid) {
       this.setState({ isValid: false });
     }
     this.props.onBlur({
       email: this.state.value,
       valid: emailIsValid,
-    })
+    });
   }
   render() {
     return (
@@ -55,9 +55,8 @@ class InputEmail extends Component {
 
 InputEmail.defaultProps = {
   value: '',
-  onChange: () => {},
   errorMessage: 'Invalid Email address',
-}
+};
 
 InputEmail.propTypes = {
   /** Label for the input box */
@@ -66,10 +65,8 @@ InputEmail.propTypes = {
   value: PropTypes.string,
   /** Message on error */
   errorMessage: PropTypes.string,
-  /** onChangeHandler that updates the input box state */
-  onChange: PropTypes.func,
   /** onBlurHandler that updates the input box state */
   onBlur: PropTypes.func.isRequired,
-}
+};
 
 export default InputEmail;

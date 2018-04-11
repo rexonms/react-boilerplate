@@ -24,7 +24,7 @@ const MessageItemPage = Loadable({
   loading,
 });
 
-initGoogleAnalytics()
+initGoogleAnalytics();
 
 const App = () => (
   <div className={Styles.container}>

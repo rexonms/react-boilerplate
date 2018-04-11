@@ -4,6 +4,7 @@ import { routerReducer, routerMiddleware } from 'react-router-redux';
 import thunk from 'redux-thunk';
 
 import reducers from './redux/reducers';
+import initialState from './initialState';
 
 const reducer = combineReducers({
   ...reducers,
@@ -14,7 +15,7 @@ export const history = createHistory({ queryKey: false });
 
 const store = createStore(
   reducer,
-  undefined,
+  initialState,
   compose(
     applyMiddleware(
       routerMiddleware(history),

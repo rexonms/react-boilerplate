@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './MessageItem.scss';
+import Styles from './MessageItem.scss';
 import Avatar from '../../Avatar/index';
 import Heading6 from '../../../Typography/H6/index';
 import Paragraph from '../../../Typography/Paragraph/index';
@@ -24,7 +24,7 @@ const propTypes = {
 const defaultProps = {};
 
 class MessageItem extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = {
     };
@@ -34,22 +34,24 @@ class MessageItem extends Component {
     this.props.onClick(this.props.email);
   }
 
-  render () {
+  render() {
     return (
-      <div className={styles.container} onClick={this.onClickHandler}>
-        <div className={styles.inner}>
-          <div className={styles.avatar}>
+      <div className={Styles.container}>
+        <div className={Styles.inner}>
+          <div className={Styles.avatar}>
             <Avatar
               imageURL={this.props.avatarImageURL}
-              imageAltText={this.props.imageAltText} />
+              imageAltText={this.props.imageAltText}
+            />
           </div>
-          <div className={styles.details}>
+          <div className={Styles.details}>
             <Heading6 labelText={this.props.recipientName} />
-            <Paragraph label={this.props.lastMessage} size='small' />
+            <Paragraph label={this.props.lastMessage} size="small" />
           </div>
         </div>
+        <button onClick={this.onClickHandler} />
       </div>
-    )
+    );
   }
 }
 

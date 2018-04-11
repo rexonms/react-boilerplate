@@ -25,21 +25,21 @@ class Home extends Component {
     this.emailObj = emailObj;
   }
   render() {
+    const { home } = this.props;
     return (
       <div className={Styles.container}>
-        <HeadingScript text="Welcome"/>
+        <HeadingScript text={home.headingText} />
         <div className={Styles.form}>
           <InputEmail
-            label="Your Email Address"
-            value="rexonms@gmail.com"
-            onBlur={(emailObj) => this.onBlurHandler(emailObj)}
+            label={home.form.inputLabel}
+            value={home.form.value}
+            onBlur={emailObj => this.onBlurHandler(emailObj)}
           />
-          <Button onClick={() => this.onClickHandler()} label="Start"/>
+          <Button onClick={this.onClickHandler} label={home.form.buttonLabel} />
         </div>
       </div>
-    )
+    );
   }
-
 }
 
 const mapStateToProps = ({ home }) => ({ home });
@@ -50,7 +50,15 @@ Home.defaultProps = {
 };
 
 Home.propTypes = {
-  home: PropTypes.shape({}),
+  home: PropTypes.shape({
+    headingText: PropTypes.string,
+    form: PropTypes.shape({
+      inputLabel: PropTypes.string,
+      value: PropTypes.string,
+      buttonLabel: PropTypes.string,
+    }),
+  }),
+  goToMessageListPage: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

@@ -60,7 +60,7 @@ const messengerListPageData = {
         email: 'Danny@mail.com',
       },
     ],
-  }
-}
+  },
+};
 
 export default messengerListPageData;
