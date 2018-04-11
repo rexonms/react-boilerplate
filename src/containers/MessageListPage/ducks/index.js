@@ -1,6 +1,6 @@
 import { push } from 'react-router-redux';
 
-import messengerListPageData from './../data';
+import messengerListPageData from '../dummtData';
 import { getValueFromLocalStorage, LOCAL_STORAGE_EMAIL_KEY } from '../../../utils/localStorage';
 
 // Actions

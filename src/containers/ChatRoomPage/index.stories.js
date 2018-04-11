@@ -3,28 +3,28 @@ import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs/react';
 import { withInfo } from '@storybook/addon-info';
 
-import MessageItemPage from './index';
+import ChatRoomPage from './index';
 
-const stories = storiesOf('containers/MessageItemPage', module);
+const stories = storiesOf('containers/ChatRoomPage', module);
 export const props = {
   buttonLabelOn: 'on',
-  buttonLabelOff:'off',
+  buttonLabelOff: 'off',
 }
 
 
 stories.addDecorator(withKnobs);
 stories.addDecorator(story => (story()));
-stories.add('MessageItemPage', withInfo(`
+stories.add('ChatRoomPage', withInfo(`
   A Stateful Component example that toggles the bulb state based on user click event.
 ~~~js
-<MessageItemPage
+<ChatRoomPage
 buttonLabelOn="on"
 buttonLabelOff="off"
   />)
 ~~~
 `)(() => {
 return (
-  <MessageItemPage
+  <ChatRoomPage
    {...props}
   />
 );

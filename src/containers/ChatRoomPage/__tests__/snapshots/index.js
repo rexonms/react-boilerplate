@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import MessageItemPage from '../../index';
-import { props } from './../../index.stories.hbs'
+import ChatRoomPage from '../../index';
+import { props } from './../../index.stories';
 
 // https://hackernoon.com/oh-snap-snapshots-unit-integration-testing-with-jest-enzyme-13cc18aecb7b
 it('Renders component correctly', () => {
-  const component = shallow(<MessageItemPage {...props} />);
+  const component = shallow(<ChatRoomPage {...props} />);
   expect(component).toMatchSnapshot();
 });

@@ -4,19 +4,19 @@ const getActions = (actionName, userResponse) => {
   const { name } = userResponse;
   const { templateRoot } = userResponse;
   const { template } = userResponse;
-  console.log('actionName', actionName)
-  console.log('userResponse', userResponse)
+  console.log('actionName', actionName);
+  console.log('userResponse', userResponse);
 
-  const actions =  {
-    index : {
+  const actions = {
+    index: {
       type: 'add',
       path: `${destination}/${path}/${name}/index.js`,
       templateFile: `${templateRoot}/${template}/index.hbs`,
     },
     story: {
       type: 'add',
-        path: `${destination}/${path}/${name}/index.stories.js`,
-        templateFile: `${templateRoot}/${template}/index.stories.hbs`,
+      path: `${destination}/${path}/${name}/index.stories.js`,
+      templateFile: `${templateRoot}/${template}/index.stories.hbs`,
     },
     style: {
       type: 'add',
@@ -47,10 +47,10 @@ const getActions = (actionName, userResponse) => {
       type: 'add',
       path: `${destination}/${path}/${name}/__tests__/snapshots/index.js`,
       templateFile: `${templateRoot}/${template}/__tests__/snapshots/index.hbs`,
-    }
+    },
   };
 
-  return actions[actionName]
-}
+  return actions[actionName];
+};
 
 module.exports = getActions;

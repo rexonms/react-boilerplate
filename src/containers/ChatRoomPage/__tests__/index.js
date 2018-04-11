@@ -2,12 +2,12 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import MessageItemPage from '../index';
-import styles from '../MessageItemPage.scss';
-import { props } from './../index.stories.hbs'
+import ChatRoomPage from '../index';
+import styles from '../ChatRoomPage.scss';
+import { props } from './../index.stories';
 
-describe('MessageItemPage Component', () => {
-  const wrapper = shallow(<MessageItemPage {...props} />);
+describe('ChatRoomPage Component', () => {
+  const wrapper = shallow(<ChatRoomPage {...props} />);
 
   it('renders with proper className', () => {
     expect(wrapper.exists(styles.container)).toBe(true);

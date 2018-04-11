@@ -19,8 +19,8 @@ const MessageListPage = Loadable({
   loader: () => import('./MessageListPage/'),
   loading,
 });
-const MessageItemPage = Loadable({
-  loader: () => import('./MessageItemPage/'),
+const ChatRoomPage = Loadable({
+  loader: () => import('./ChatRoomPage/'),
   loading,
 });
 
@@ -32,7 +32,7 @@ const App = () => (
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/messages" component={MessageListPage} />
-        <Route path="/messages/:recipientEmail" component={MessageItemPage} />
+        <Route path="/messages/:recipientEmail" component={ChatRoomPage} />
       </Switch>
     </ConnectedRouter>
   </div>

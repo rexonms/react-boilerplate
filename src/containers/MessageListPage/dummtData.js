@@ -1,5 +1,10 @@
 const messengerListPageData = {
-  translations: {},
+  translations: {
+    status: {
+      online: 'Online',
+      offline: 'Offline',
+    },
+  },
   dbData: {
     friendsList: [
       {
