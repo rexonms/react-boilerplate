@@ -4,9 +4,9 @@ exports[`Renders component correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Avatar
-    imageAltText="Some Text"
-    imageURL="https://place-hold.it/100"
+  Symbol(enzyme.__unrendered__): <HeadingScript
+    name="component"
+    text="snap"
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -20,26 +20,12 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <img
-        alt="Some Text"
-        src="https://place-hold.it/100"
-/>,
+      "children": "snap",
       "className": "container",
     },
     "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "alt": "Some Text",
-        "src": "https://place-hold.it/100",
-      },
-      "ref": null,
-      "rendered": null,
-      "type": "img",
-    },
-    "type": "div",
+    "rendered": "snap",
+    "type": "h1",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -47,26 +33,12 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <img
-          alt="Some Text"
-          src="https://place-hold.it/100"
-/>,
+        "children": "snap",
         "className": "container",
       },
       "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "alt": "Some Text",
-          "src": "https://place-hold.it/100",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "img",
-      },
-      "type": "div",
+      "rendered": "snap",
+      "type": "h1",
     },
   ],
   Symbol(enzyme.__options__): Object {

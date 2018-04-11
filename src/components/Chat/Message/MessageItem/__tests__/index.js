@@ -7,7 +7,7 @@ import styles from '../MessageItem.scss';
 import { props } from './../index.stories';
 
 describe('MessageItem Component', () => {
-  const wrapper = shallow(<MessageItem {...props} />);
+  const wrapper = shallow(<MessageItem {...props} onClick={() => {}} />);
 
   it('renders with proper className', () => {
     expect(wrapper.exists(styles.container)).toBe(true);

@@ -3,15 +3,15 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import MessageList from '../index';
-import styles from '../MessageList.scss';
-import { props } from './../index.stories.hbs'
+import Styles from '../MessageList.scss';
+import { props } from './../index.stories';
 
 describe('MessageList Component', () => {
-  const wrapper = shallow(<MessageList {...props} />);
+  const wrapper = shallow(<MessageList {...props} onClick={() => {}} />);
 
   it('renders with proper className', () => {
-    expect(wrapper.exists(styles.container)).toBe(true);
-    expect(wrapper.find(`.${styles.container}`)).toHaveLength(1);
+    expect(wrapper.exists(Styles.container)).toBe(true);
+    expect(wrapper.find(`.${Styles.container}`)).toHaveLength(1);
   });
 
   it('container the required prop', () => {
@@ -20,20 +20,6 @@ describe('MessageList Component', () => {
 
   it('container the required prop', () => {
     expect(wrapper.exists(props.buttonLabelOff)).toBe(true);
-  });
-
-  it('checks if toggle button is working properly', () => {
-    const button = wrapper.find(`.${styles.button}`);
-    // verifying default state
-    expect(wrapper.text()).toEqual(props.buttonLabelOn);
-
-    button.simulate('click');
-    expect(wrapper.text()).toEqual(props.buttonLabelOff); // label text is changed
-    expect(wrapper.find(`.${styles.bulbOff}`)).toHaveLength(1); // className is changed
-
-    button.simulate('click');
-    expect(wrapper.text()).toEqual(props.buttonLabelOn);  // label text is changed
-    expect(wrapper.find(`.${styles.bulbOn}`)).toHaveLength(1); // className is changed
   });
 });
 

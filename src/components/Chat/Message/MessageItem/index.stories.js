@@ -28,11 +28,9 @@ stories.add('MessageItem', withInfo(`
         imageAltText: 'Mr. Smith',
     />
   ~~~
-`)(() => {
-return (
+`)(() => (
   <MessageItem
     {...props}
     onClick={action(this.props.email)}
   />
-);
-}));
+)));

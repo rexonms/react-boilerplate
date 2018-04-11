@@ -6,8 +6,7 @@ import styles from '../Button.scss';
 
 describe('Button Component', () => {
   const name = 'foo';
-  const wrapper = shallow(<Button name={name} />);
-
+  const wrapper = shallow(<Button label={name} onClick={() => {}} />);
   it('renders with proper className', () => {
     expect(wrapper.exists(styles.container)).toBe(true);
   });

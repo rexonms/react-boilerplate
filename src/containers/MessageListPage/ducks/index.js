@@ -32,11 +32,11 @@ export const setUserEmailAddressInMessageListPage = emailAddress => (
 );
 
 export const setMessagePageData = data => (
-  {
-    type: SET_MESSAGE_LIST_PAGE_DATA,
-    payload: data,
-  }
+  { type: SET_MESSAGE_LIST_PAGE_DATA, payload: data }
 );
+
+// Side effects, only as applicable
+// e.g. thunks, epics
 
 export const getMessageListPageData = () => (
   (dispatch, getState) => {
@@ -64,6 +64,5 @@ export const goToMessageItemPageFromMessageListPage = recipientEmail => (
     dispatch(push(`messages/${recipientEmail}`));
   }
 );
-
 
 export default Reducer;

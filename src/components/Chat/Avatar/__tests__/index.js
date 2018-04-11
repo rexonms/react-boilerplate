@@ -5,8 +5,8 @@ import Avatar from '../index';
 import styles from '../Avatar.scss';
 
 describe('Avatar Component', () => {
-  const imageURL='https://place-hold.it/100';
-  const wrapper = shallow(<Avatar imageURL={imageURL} />);
+  const imageURL = 'https://place-hold.it/100';
+  const wrapper = shallow(<Avatar imageURL={imageURL} imageAltText="Some Text" />);
 
   it('renders with proper className', () => {
     expect(wrapper.exists(styles.container)).toBe(true);

@@ -18,7 +18,7 @@ const propTypes = {
 };
 const defaultProps = {};
 
-class MessageListPage extends Component {
+export class MessageListPage extends Component {
   constructor(props) {
     super(props);
     this.state = {};
