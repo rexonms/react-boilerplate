@@ -4,7 +4,7 @@ import { shallow } from 'enzyme';
 
 import {{name}} from '../index';
 import Styles from '../{{name}}.scss';
-import { props } from './../index.stories.js'
+import { props } from './../index.stories';
 
 describe('{{name}} Component', () => {
   const wrapper = shallow(<{{name}} {...props} />);
@@ -32,7 +32,7 @@ describe('{{name}} Component', () => {
     expect(wrapper.find(`.${Styles.bulbOff}`)).toHaveLength(1); // className is changed
 
     button.simulate('click');
-    expect(wrapper.text()).toEqual(props.buttonLabelOn);  // label text is changed
+    expect(wrapper.text()).toEqual(props.buttonLabelOn); // label text is changed
     expect(wrapper.find(`.${Styles.bulbOn}`)).toHaveLength(1); // className is changed
   });
 });

@@ -1,6 +1,6 @@
 import { push } from 'react-router-redux';
 import { setValueInLocalStorage, LOCAL_STORAGE_EMAIL_KEY } from '../../../utils/localStorage';
-import { setCHAT_BOX_USEREmailAddressInMessageListPage } from '../../MessageListPage/ducks/index';
+import { setUserEmailAddressInMessageListPage } from '../../MessageListPage/ducks/index';
 
 // Actions
 
@@ -20,7 +20,7 @@ export const goToMessageListPage = email => (
     // first save the email on local host
     setValueInLocalStorage(LOCAL_STORAGE_EMAIL_KEY, email);
     // pass the email to messageList Page
-    dispatch(setCHAT_BOX_USEREmailAddressInMessageListPage(email));
+    dispatch(setUserEmailAddressInMessageListPage(email));
     // go to messageListPage
     dispatch(push('/messages'));
   }

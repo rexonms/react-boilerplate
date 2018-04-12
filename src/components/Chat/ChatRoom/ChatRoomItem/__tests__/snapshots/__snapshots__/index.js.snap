@@ -5,7 +5,9 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ChatRoomItem
-    message="\\"How you doing"
+    imageAltText="Alt text of image"
+    imageURL="https://place-hold.it/100"
+    message="How you doing?"
     type="friend"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -20,23 +22,78 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <p>
-        "How you doing
-</p>,
-      "className": "container friend",
+      "children": Array [
+        <div
+          className="thumbnail"
+>
+          <Avatar
+                    imageAltText="Alt text of image"
+                    imageURL="https://place-hold.it/100"
+          />
+</div>,
+        <div
+          className=" message friend"
+>
+          <p>
+                    How you doing?
+          </p>
+</div>,
+      ],
+      "className": "container",
     },
     "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": "\\"How you doing",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Avatar
+            imageAltText="Alt text of image"
+            imageURL="https://place-hold.it/100"
+/>,
+          "className": "thumbnail",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "imageAltText": "Alt text of image",
+            "imageURL": "https://place-hold.it/100",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
       },
-      "ref": null,
-      "rendered": "\\"How you doing",
-      "type": "p",
-    },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <p>
+            How you doing?
+</p>,
+          "className": " message friend",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "How you doing?",
+          },
+          "ref": null,
+          "rendered": "How you doing?",
+          "type": "p",
+        },
+        "type": "div",
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -45,23 +102,78 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <p>
-          "How you doing
-</p>,
-        "className": "container friend",
+        "children": Array [
+          <div
+            className="thumbnail"
+>
+            <Avatar
+                        imageAltText="Alt text of image"
+                        imageURL="https://place-hold.it/100"
+            />
+</div>,
+          <div
+            className=" message friend"
+>
+            <p>
+                        How you doing?
+            </p>
+</div>,
+        ],
+        "className": "container",
       },
       "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "\\"How you doing",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Avatar
+              imageAltText="Alt text of image"
+              imageURL="https://place-hold.it/100"
+/>,
+            "className": "thumbnail",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "imageAltText": "Alt text of image",
+              "imageURL": "https://place-hold.it/100",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
         },
-        "ref": null,
-        "rendered": "\\"How you doing",
-        "type": "p",
-      },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <p>
+              How you doing?
+</p>,
+            "className": " message friend",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "How you doing?",
+            },
+            "ref": null,
+            "rendered": "How you doing?",
+            "type": "p",
+          },
+          "type": "div",
+        },
+      ],
       "type": "div",
     },
   ],
@@ -80,7 +192,9 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ChatRoomItem
-    message="\\"How you doing"
+    imageAltText="Alt text of image"
+    imageURL="https://place-hold.it/100"
+    message="How you doing?"
     type="user"
 />,
   Symbol(enzyme.__renderer__): Object {
@@ -95,23 +209,46 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": <p>
-        "How you doing
-</p>,
-      "className": "container user",
+      "children": Array [
+        false,
+        <div
+          className=" message user"
+>
+          <p>
+                    How you doing?
+          </p>
+</div>,
+      ],
+      "className": "container",
     },
     "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": "\\"How you doing",
+    "rendered": Array [
+      false,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <p>
+            How you doing?
+</p>,
+          "className": " message user",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "How you doing?",
+          },
+          "ref": null,
+          "rendered": "How you doing?",
+          "type": "p",
+        },
+        "type": "div",
       },
-      "ref": null,
-      "rendered": "\\"How you doing",
-      "type": "p",
-    },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -120,23 +257,46 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": <p>
-          "How you doing
-</p>,
-        "className": "container user",
+        "children": Array [
+          false,
+          <div
+            className=" message user"
+>
+            <p>
+                        How you doing?
+            </p>
+</div>,
+        ],
+        "className": "container",
       },
       "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "\\"How you doing",
+      "rendered": Array [
+        false,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <p>
+              How you doing?
+</p>,
+            "className": " message user",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "How you doing?",
+            },
+            "ref": null,
+            "rendered": "How you doing?",
+            "type": "p",
+          },
+          "type": "div",
         },
-        "ref": null,
-        "rendered": "\\"How you doing",
-        "type": "p",
-      },
+      ],
       "type": "div",
     },
   ],

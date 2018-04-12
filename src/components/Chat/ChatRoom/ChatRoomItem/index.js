@@ -22,7 +22,6 @@ const defaultProps = {
 
 const ChatRoomItem = props => (
   <div className={`${Styles.container}`}>
-    {console.log(props)}
     {props.type === CHAT_BOX_FRIEND &&
       <div className={Styles.thumbnail}>
         <Avatar imageURL={props.imageURL} imageAltText={props.imageAltText} />

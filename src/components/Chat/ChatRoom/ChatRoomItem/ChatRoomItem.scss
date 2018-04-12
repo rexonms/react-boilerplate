@@ -6,6 +6,7 @@
 .message {
   padding: 10px;
   border-radius: 20px;
+  width: 70vw;
   p {
     margin: 0;
     font-size: $fontSizeSmall;
@@ -22,6 +23,5 @@
   background: #ccc;
 }
 .friend {
-  width: 80vw;
   background: #eee;
 }

@@ -1,0 +1,283 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders component correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MessageList
+    list={
+        Array [
+            Object {
+              "avatarImageURL": "http://dummyimage.com/mediumrectangle/111111/eeeeee",
+              "email": "john.smith@gmail.com",
+              "id": "1",
+              "imageAltText": "John Smith",
+              "lastMessage": "Where have you been?",
+              "recipientName": "John Smith",
+            },
+            Object {
+              "avatarImageURL": "http://dummyimage.com/mediumrectangle/333333/eeeeee",
+              "email": "Jenny.smith@gmail.com",
+              "id": "2",
+              "imageAltText": "Jenny Smith",
+              "lastMessage": "And then there this time when I was thing of lots of stuff. A single line field is used when the input anticipated by the CHAT_BOX_USER is a single line of text as opposed to a paragraph.",
+              "recipientName": "Jenny",
+            },
+            Object {
+              "avatarImageURL": "http://dummyimage.com/mediumrectangle/cccccc/eeeeee",
+              "email": "Jhonothan.smith@gmail.com",
+              "id": "3",
+              "imageAltText": "Jhonothan Smith",
+              "lastMessage": "yt",
+              "recipientName": "Mr. Jhonothan Goldsmith",
+            },
+            Object {
+              "avatarImageURL": "http://dummyimage.com/mediumrectangle/aaaaaa/eeeeee",
+              "email": "smith@gmail.com",
+              "id": "4",
+              "imageAltText": "",
+              "lastMessage": "hola",
+              "recipientName": "",
+            },
+          ]
+    }
+    onClick={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <MessageItem
+          avatarImageURL="http://dummyimage.com/mediumrectangle/111111/eeeeee"
+          email="john.smith@gmail.com"
+          imageAltText="John Smith"
+          lastMessage="Where have you been?"
+          onClick={[Function]}
+          recipientName="John Smith"
+/>,
+        <MessageItem
+          avatarImageURL="http://dummyimage.com/mediumrectangle/333333/eeeeee"
+          email="Jenny.smith@gmail.com"
+          imageAltText="Jenny Smith"
+          lastMessage="And then there this time when I was thing of lots of stuff. A single line field is used when the input anticipated by the CHAT_BOX_USER is a single line of text as opposed to a paragraph."
+          onClick={[Function]}
+          recipientName="Jenny"
+/>,
+        <MessageItem
+          avatarImageURL="http://dummyimage.com/mediumrectangle/cccccc/eeeeee"
+          email="Jhonothan.smith@gmail.com"
+          imageAltText="Jhonothan Smith"
+          lastMessage="yt"
+          onClick={[Function]}
+          recipientName="Mr. Jhonothan Goldsmith"
+/>,
+        <MessageItem
+          avatarImageURL="http://dummyimage.com/mediumrectangle/aaaaaa/eeeeee"
+          email="smith@gmail.com"
+          imageAltText=""
+          lastMessage="hola"
+          onClick={[Function]}
+          recipientName=""
+/>,
+      ],
+      "className": "container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "class",
+        "props": Object {
+          "avatarImageURL": "http://dummyimage.com/mediumrectangle/111111/eeeeee",
+          "email": "john.smith@gmail.com",
+          "imageAltText": "John Smith",
+          "lastMessage": "Where have you been?",
+          "onClick": [Function],
+          "recipientName": "John Smith",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "2",
+        "nodeType": "class",
+        "props": Object {
+          "avatarImageURL": "http://dummyimage.com/mediumrectangle/333333/eeeeee",
+          "email": "Jenny.smith@gmail.com",
+          "imageAltText": "Jenny Smith",
+          "lastMessage": "And then there this time when I was thing of lots of stuff. A single line field is used when the input anticipated by the CHAT_BOX_USER is a single line of text as opposed to a paragraph.",
+          "onClick": [Function],
+          "recipientName": "Jenny",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "3",
+        "nodeType": "class",
+        "props": Object {
+          "avatarImageURL": "http://dummyimage.com/mediumrectangle/cccccc/eeeeee",
+          "email": "Jhonothan.smith@gmail.com",
+          "imageAltText": "Jhonothan Smith",
+          "lastMessage": "yt",
+          "onClick": [Function],
+          "recipientName": "Mr. Jhonothan Goldsmith",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "4",
+        "nodeType": "class",
+        "props": Object {
+          "avatarImageURL": "http://dummyimage.com/mediumrectangle/aaaaaa/eeeeee",
+          "email": "smith@gmail.com",
+          "imageAltText": "",
+          "lastMessage": "hola",
+          "onClick": [Function],
+          "recipientName": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <MessageItem
+            avatarImageURL="http://dummyimage.com/mediumrectangle/111111/eeeeee"
+            email="john.smith@gmail.com"
+            imageAltText="John Smith"
+            lastMessage="Where have you been?"
+            onClick={[Function]}
+            recipientName="John Smith"
+/>,
+          <MessageItem
+            avatarImageURL="http://dummyimage.com/mediumrectangle/333333/eeeeee"
+            email="Jenny.smith@gmail.com"
+            imageAltText="Jenny Smith"
+            lastMessage="And then there this time when I was thing of lots of stuff. A single line field is used when the input anticipated by the CHAT_BOX_USER is a single line of text as opposed to a paragraph."
+            onClick={[Function]}
+            recipientName="Jenny"
+/>,
+          <MessageItem
+            avatarImageURL="http://dummyimage.com/mediumrectangle/cccccc/eeeeee"
+            email="Jhonothan.smith@gmail.com"
+            imageAltText="Jhonothan Smith"
+            lastMessage="yt"
+            onClick={[Function]}
+            recipientName="Mr. Jhonothan Goldsmith"
+/>,
+          <MessageItem
+            avatarImageURL="http://dummyimage.com/mediumrectangle/aaaaaa/eeeeee"
+            email="smith@gmail.com"
+            imageAltText=""
+            lastMessage="hola"
+            onClick={[Function]}
+            recipientName=""
+/>,
+        ],
+        "className": "container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "class",
+          "props": Object {
+            "avatarImageURL": "http://dummyimage.com/mediumrectangle/111111/eeeeee",
+            "email": "john.smith@gmail.com",
+            "imageAltText": "John Smith",
+            "lastMessage": "Where have you been?",
+            "onClick": [Function],
+            "recipientName": "John Smith",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "class",
+          "props": Object {
+            "avatarImageURL": "http://dummyimage.com/mediumrectangle/333333/eeeeee",
+            "email": "Jenny.smith@gmail.com",
+            "imageAltText": "Jenny Smith",
+            "lastMessage": "And then there this time when I was thing of lots of stuff. A single line field is used when the input anticipated by the CHAT_BOX_USER is a single line of text as opposed to a paragraph.",
+            "onClick": [Function],
+            "recipientName": "Jenny",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "3",
+          "nodeType": "class",
+          "props": Object {
+            "avatarImageURL": "http://dummyimage.com/mediumrectangle/cccccc/eeeeee",
+            "email": "Jhonothan.smith@gmail.com",
+            "imageAltText": "Jhonothan Smith",
+            "lastMessage": "yt",
+            "onClick": [Function],
+            "recipientName": "Mr. Jhonothan Goldsmith",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "4",
+          "nodeType": "class",
+          "props": Object {
+            "avatarImageURL": "http://dummyimage.com/mediumrectangle/aaaaaa/eeeeee",
+            "email": "smith@gmail.com",
+            "imageAltText": "",
+            "lastMessage": "hola",
+            "onClick": [Function],
+            "recipientName": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

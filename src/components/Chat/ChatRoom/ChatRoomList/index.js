@@ -9,11 +9,11 @@ const propTypes = {
   /** Name of the component */
   list: PropTypes.shape({
     /** The conversation id */
-    id: PropTypes.string.isRequired,
+    id: PropTypes.string,
     /** Email address of the author */
-    authorEmail: PropTypes.string.isRequired,
+    authorEmail: PropTypes.string,
     /** Message sent by user */
-    message: PropTypes.string.isRequired,
+    message: PropTypes.string,
   }).isRequired,
 };
 
@@ -28,6 +28,7 @@ const ChatRoomList = props => (
       return (
         <div key={`conv-${conversation.id}`} className={`${Styles.content} ${Styles[type]}`}>
           <ChatRoomItem
+            id={conversation.id}
             message={conversation.message}
             type={type}
             imageURL={conversation.imageURL}

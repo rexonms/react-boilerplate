@@ -40,11 +40,11 @@ export class MessageListPage extends Component {
     return (
       <div className={Styles.container}>
         <div className={Styles.header}>
-          <Heading6 labelText={messages.CHAT_BOX_USER.email} />
+          <Heading6 labelText={messages.user.email} />
         </div>
         <div className={Styles.messages}>
           <MessageList
-            list={messages.data.dbData.CHAT_BOX_FRIENDsList}
+            list={messages.data.dbData.friendsList}
             onClick={this.onClickHandler}
           />
         </div>

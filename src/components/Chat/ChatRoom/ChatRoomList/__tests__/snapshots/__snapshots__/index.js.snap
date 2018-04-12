@@ -5,7 +5,47 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <ChatRoomList
-    name="component"
+    list={
+        Object {
+            "1": Object {
+              "authorEmail": "rexonms@gmail.com",
+              "id": "1",
+              "imageAltText": "Alt text of image",
+              "imageURL": "https://place-hold.it/100",
+              "message": "hola!",
+            },
+            "2": Object {
+              "authorEmail": "yi@gmail.com",
+              "id": "2",
+              "imageAltText": "Alt text of image",
+              "imageURL": "https://place-hold.it/100",
+              "message": "whats up!",
+            },
+            "3": Object {
+              "authorEmail": "yi@gmail.com",
+              "id": "3",
+              "imageAltText": "Alt text of image",
+              "imageURL": "https://place-hold.it/100",
+              "message": "Where did you go? Finally, you should probably take a look at this document for a discussion of the three possible schemas for a messaging/commenting database, including the trade-offs for each design: ",
+            },
+            "4": Object {
+              "authorEmail": "rexonms@gmail.com",
+              "id": "4",
+              "imageAltText": "Alt text of image",
+              "imageURL": "https://place-hold.it/100",
+              "message": "Oops sorry! didn't se you message",
+            },
+            "5": Object {
+              "authorEmail": "rexonms@gmail.com",
+              "id": "5",
+              "imageAltText": "Alt text of image",
+              "imageURL": "https://place-hold.it/100",
+              "message": "In addition, you should probably review the links in the 'See Also' section of that document. I especially recommend the video presentations.
+        
+        Finally, you should probably take a look at this document for a discussion of the three possible schemas for a messaging/commenting database, including the trade-offs for each design: ",
+            },
+          }
+    }
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -19,11 +59,234 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": "component",
+      "children": Array [
+        <div
+          className="content user"
+>
+          <ChatRoomItem
+                    id="1"
+                    imageAltText="Alt text of image"
+                    imageURL="https://place-hold.it/100"
+                    message="hola!"
+                    type="user"
+          />
+</div>,
+        <div
+          className="content friend"
+>
+          <ChatRoomItem
+                    id="2"
+                    imageAltText="Alt text of image"
+                    imageURL="https://place-hold.it/100"
+                    message="whats up!"
+                    type="friend"
+          />
+</div>,
+        <div
+          className="content friend"
+>
+          <ChatRoomItem
+                    id="3"
+                    imageAltText="Alt text of image"
+                    imageURL="https://place-hold.it/100"
+                    message="Where did you go? Finally, you should probably take a look at this document for a discussion of the three possible schemas for a messaging/commenting database, including the trade-offs for each design: "
+                    type="friend"
+          />
+</div>,
+        <div
+          className="content user"
+>
+          <ChatRoomItem
+                    id="4"
+                    imageAltText="Alt text of image"
+                    imageURL="https://place-hold.it/100"
+                    message="Oops sorry! didn't se you message"
+                    type="user"
+          />
+</div>,
+        <div
+          className="content user"
+>
+          <ChatRoomItem
+                    id="5"
+                    imageAltText="Alt text of image"
+                    imageURL="https://place-hold.it/100"
+                    message="In addition, you should probably review the links in the 'See Also' section of that document. I especially recommend the video presentations.
+          
+          Finally, you should probably take a look at this document for a discussion of the three possible schemas for a messaging/commenting database, including the trade-offs for each design: "
+                    type="user"
+          />
+</div>,
+      ],
       "className": "container",
     },
     "ref": null,
-    "rendered": "component",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "conv-1",
+        "nodeType": "host",
+        "props": Object {
+          "children": <ChatRoomItem
+            id="1"
+            imageAltText="Alt text of image"
+            imageURL="https://place-hold.it/100"
+            message="hola!"
+            type="user"
+/>,
+          "className": "content user",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "id": "1",
+            "imageAltText": "Alt text of image",
+            "imageURL": "https://place-hold.it/100",
+            "message": "hola!",
+            "type": "user",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": "conv-2",
+        "nodeType": "host",
+        "props": Object {
+          "children": <ChatRoomItem
+            id="2"
+            imageAltText="Alt text of image"
+            imageURL="https://place-hold.it/100"
+            message="whats up!"
+            type="friend"
+/>,
+          "className": "content friend",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "id": "2",
+            "imageAltText": "Alt text of image",
+            "imageURL": "https://place-hold.it/100",
+            "message": "whats up!",
+            "type": "friend",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": "conv-3",
+        "nodeType": "host",
+        "props": Object {
+          "children": <ChatRoomItem
+            id="3"
+            imageAltText="Alt text of image"
+            imageURL="https://place-hold.it/100"
+            message="Where did you go? Finally, you should probably take a look at this document for a discussion of the three possible schemas for a messaging/commenting database, including the trade-offs for each design: "
+            type="friend"
+/>,
+          "className": "content friend",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "id": "3",
+            "imageAltText": "Alt text of image",
+            "imageURL": "https://place-hold.it/100",
+            "message": "Where did you go? Finally, you should probably take a look at this document for a discussion of the three possible schemas for a messaging/commenting database, including the trade-offs for each design: ",
+            "type": "friend",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": "conv-4",
+        "nodeType": "host",
+        "props": Object {
+          "children": <ChatRoomItem
+            id="4"
+            imageAltText="Alt text of image"
+            imageURL="https://place-hold.it/100"
+            message="Oops sorry! didn't se you message"
+            type="user"
+/>,
+          "className": "content user",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "id": "4",
+            "imageAltText": "Alt text of image",
+            "imageURL": "https://place-hold.it/100",
+            "message": "Oops sorry! didn't se you message",
+            "type": "user",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": "conv-5",
+        "nodeType": "host",
+        "props": Object {
+          "children": <ChatRoomItem
+            id="5"
+            imageAltText="Alt text of image"
+            imageURL="https://place-hold.it/100"
+            message="In addition, you should probably review the links in the 'See Also' section of that document. I especially recommend the video presentations.
+
+Finally, you should probably take a look at this document for a discussion of the three possible schemas for a messaging/commenting database, including the trade-offs for each design: "
+            type="user"
+/>,
+          "className": "content user",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "id": "5",
+            "imageAltText": "Alt text of image",
+            "imageURL": "https://place-hold.it/100",
+            "message": "In addition, you should probably review the links in the 'See Also' section of that document. I especially recommend the video presentations.
+
+Finally, you should probably take a look at this document for a discussion of the three possible schemas for a messaging/commenting database, including the trade-offs for each design: ",
+            "type": "user",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -32,11 +295,234 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "component",
+        "children": Array [
+          <div
+            className="content user"
+>
+            <ChatRoomItem
+                        id="1"
+                        imageAltText="Alt text of image"
+                        imageURL="https://place-hold.it/100"
+                        message="hola!"
+                        type="user"
+            />
+</div>,
+          <div
+            className="content friend"
+>
+            <ChatRoomItem
+                        id="2"
+                        imageAltText="Alt text of image"
+                        imageURL="https://place-hold.it/100"
+                        message="whats up!"
+                        type="friend"
+            />
+</div>,
+          <div
+            className="content friend"
+>
+            <ChatRoomItem
+                        id="3"
+                        imageAltText="Alt text of image"
+                        imageURL="https://place-hold.it/100"
+                        message="Where did you go? Finally, you should probably take a look at this document for a discussion of the three possible schemas for a messaging/commenting database, including the trade-offs for each design: "
+                        type="friend"
+            />
+</div>,
+          <div
+            className="content user"
+>
+            <ChatRoomItem
+                        id="4"
+                        imageAltText="Alt text of image"
+                        imageURL="https://place-hold.it/100"
+                        message="Oops sorry! didn't se you message"
+                        type="user"
+            />
+</div>,
+          <div
+            className="content user"
+>
+            <ChatRoomItem
+                        id="5"
+                        imageAltText="Alt text of image"
+                        imageURL="https://place-hold.it/100"
+                        message="In addition, you should probably review the links in the 'See Also' section of that document. I especially recommend the video presentations.
+            
+            Finally, you should probably take a look at this document for a discussion of the three possible schemas for a messaging/commenting database, including the trade-offs for each design: "
+                        type="user"
+            />
+</div>,
+        ],
         "className": "container",
       },
       "ref": null,
-      "rendered": "component",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "conv-1",
+          "nodeType": "host",
+          "props": Object {
+            "children": <ChatRoomItem
+              id="1"
+              imageAltText="Alt text of image"
+              imageURL="https://place-hold.it/100"
+              message="hola!"
+              type="user"
+/>,
+            "className": "content user",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "id": "1",
+              "imageAltText": "Alt text of image",
+              "imageURL": "https://place-hold.it/100",
+              "message": "hola!",
+              "type": "user",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": "conv-2",
+          "nodeType": "host",
+          "props": Object {
+            "children": <ChatRoomItem
+              id="2"
+              imageAltText="Alt text of image"
+              imageURL="https://place-hold.it/100"
+              message="whats up!"
+              type="friend"
+/>,
+            "className": "content friend",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "id": "2",
+              "imageAltText": "Alt text of image",
+              "imageURL": "https://place-hold.it/100",
+              "message": "whats up!",
+              "type": "friend",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": "conv-3",
+          "nodeType": "host",
+          "props": Object {
+            "children": <ChatRoomItem
+              id="3"
+              imageAltText="Alt text of image"
+              imageURL="https://place-hold.it/100"
+              message="Where did you go? Finally, you should probably take a look at this document for a discussion of the three possible schemas for a messaging/commenting database, including the trade-offs for each design: "
+              type="friend"
+/>,
+            "className": "content friend",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "id": "3",
+              "imageAltText": "Alt text of image",
+              "imageURL": "https://place-hold.it/100",
+              "message": "Where did you go? Finally, you should probably take a look at this document for a discussion of the three possible schemas for a messaging/commenting database, including the trade-offs for each design: ",
+              "type": "friend",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": "conv-4",
+          "nodeType": "host",
+          "props": Object {
+            "children": <ChatRoomItem
+              id="4"
+              imageAltText="Alt text of image"
+              imageURL="https://place-hold.it/100"
+              message="Oops sorry! didn't se you message"
+              type="user"
+/>,
+            "className": "content user",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "id": "4",
+              "imageAltText": "Alt text of image",
+              "imageURL": "https://place-hold.it/100",
+              "message": "Oops sorry! didn't se you message",
+              "type": "user",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": "conv-5",
+          "nodeType": "host",
+          "props": Object {
+            "children": <ChatRoomItem
+              id="5"
+              imageAltText="Alt text of image"
+              imageURL="https://place-hold.it/100"
+              message="In addition, you should probably review the links in the 'See Also' section of that document. I especially recommend the video presentations.
+
+Finally, you should probably take a look at this document for a discussion of the three possible schemas for a messaging/commenting database, including the trade-offs for each design: "
+              type="user"
+/>,
+            "className": "content user",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "id": "5",
+              "imageAltText": "Alt text of image",
+              "imageURL": "https://place-hold.it/100",
+              "message": "In addition, you should probably review the links in the 'See Also' section of that document. I especially recommend the video presentations.
+
+Finally, you should probably take a look at this document for a discussion of the three possible schemas for a messaging/commenting database, including the trade-offs for each design: ",
+              "type": "user",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
+        },
+      ],
       "type": "div",
     },
   ],

@@ -13,12 +13,6 @@ stories.addDecorator(story => (story()));
 stories.add('ChatRoomList', withInfo(`
   Component
   ~~~js
-    <ChatRoomList name='ChatRoomList' />)
+    <ChatRoomList list={conversationList} />)
   ~~~
-`)(() => {
-  return (
-    <ChatRoomList
-      list={conversationList}
-    />
-  );
-}));
+`)(() => <ChatRoomList list={conversationList} />));

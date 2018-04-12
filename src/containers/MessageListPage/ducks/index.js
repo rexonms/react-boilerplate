@@ -4,17 +4,17 @@ import messengerListPageData from '../dummtData';
 import { getValueFromLocalStorage, LOCAL_STORAGE_EMAIL_KEY } from '../../../utils/localStorage';
 
 // Actions
-const SET_CHAT_BOX_USER_EMAIL = 'app/messageListPage/SET_CHAT_BOX_USER_EMAIL';
+const SET_USER_EMAIL = 'app/messageListPage/SET_USER_EMAIL';
 const SET_MESSAGE_LIST_PAGE_DATA = 'app/messageListPage/SET_MESSAGE_LIST_PAGE_DATA';
 
 // Reducer
 const Reducer = (state = {}, action = {}) => {
-  const CHAT_BOX_USER = {}; // For eslint
+  const user = {}; // For eslint
   switch (action.type) {
-    case SET_CHAT_BOX_USER_EMAIL:
-      CHAT_BOX_USER.email = action.payload;
+    case SET_USER_EMAIL:
+      user.email = action.payload;
       return Object.assign({}, state, {
-        CHAT_BOX_USER,
+        user,
       });
     case SET_MESSAGE_LIST_PAGE_DATA: {
       return Object.assign({}, state, {
@@ -27,8 +27,8 @@ const Reducer = (state = {}, action = {}) => {
 };
 
 // Action Creator
-export const setCHAT_BOX_USEREmailAddressInMessageListPage = emailAddress => (
-  { type: SET_CHAT_BOX_USER_EMAIL, payload: emailAddress }
+export const setUserEmailAddressInMessageListPage = emailAddress => (
+  { type: SET_USER_EMAIL, payload: emailAddress }
 );
 
 export const setMessagePageData = data => (
@@ -40,14 +40,15 @@ export const setMessagePageData = data => (
 
 export const getMessageListPageData = () => (
   (dispatch, getState) => {
-    if (!getState().messages.CHAT_BOX_USER) {
+    // Save the user Id in local storage and messageList page
+    if (!getState().messages.user) {
       const email = getValueFromLocalStorage(LOCAL_STORAGE_EMAIL_KEY);
-      dispatch(setCHAT_BOX_USEREmailAddressInMessageListPage(email));
+      dispatch(setUserEmailAddressInMessageListPage(email));
     }
 
     // Make the Ajax call
     setTimeout(() => {
-      messengerListPageData.dbData.CHAT_BOX_FRIENDsList.map((message) => {
+      messengerListPageData.dbData.friendsList.map((message) => {
         const m = message;
         m.imageAltText = `${m.recipientName} image`;
         return m;
