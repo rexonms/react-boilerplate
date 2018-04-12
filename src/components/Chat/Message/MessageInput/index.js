@@ -38,8 +38,8 @@ class MessageInput extends Component {
             className={Styles.input}
             name={this.props.label}
             value={this.state.message}
-            onChange={this.onChangeHandler}
-            onKeyUp={this.onKeyUpHandler}
+            onChange={e => this.onChangeHandler(e)}
+            onKeyUp={e => this.onKeyUpHandler(e)} // Required for Jest testing
           />
         </label>
       </div>
