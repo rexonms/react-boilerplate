@@ -46,7 +46,7 @@ class {{name}} extends Component {
         </div>
         <button
           className={Styles.button}
-          onClick={this.onClickHandler}
+          onClick={e => this.onClickHandler(e)} // anonymous function is required to do Jest testing.
         >
           {this.getButtonLabel()}
         </button>
