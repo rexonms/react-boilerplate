@@ -2,7 +2,6 @@
 
 }
 .label {
-  font-family: $fontDefault;
   font-weight: normal;
   font-size: 11px;
   line-height: 15px;
@@ -29,7 +28,6 @@ input {
 }
 .error {
   min-height: 15px;
-  font-family: $fontDefault;
   text-align: right;
   font-size: x-small;
   color: #c00;

@@ -1,6 +1,5 @@
 .container {
   .label {
-    font-family: $fontFamilyDefault;
     font-weight: normal;
     font-size: $fontSizeDefault;
     line-height: $lineHeightDefault;
@@ -26,7 +25,6 @@
     border-color: #c00;
   }
   .error {
-    font-family: $fontDefault;
     text-align: right;
     font-size: x-small;
     color: #c00;

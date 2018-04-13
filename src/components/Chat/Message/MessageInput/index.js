@@ -28,6 +28,7 @@ class MessageInput extends Component {
   onKeyUpHandler(e) {
     if (e.keyCode === 13) {
       this.props.sendMessage(this.state.message);
+      this.setState({ message: '' });
     }
   }
   render() {

@@ -1,7 +1,8 @@
 import { push } from 'react-router-redux';
 
-import messengerListPageData from '../dummtData';
+import messengerListPageData from '../dummyData';
 import { getValueFromLocalStorage, LOCAL_STORAGE_EMAIL_KEY } from '../../../utils/localStorage';
+import { setEmailAddressesInChatRoomPage } from '../../ChatRoomPage/ducks/index';
 
 // Actions
 const SET_USER_EMAIL = 'app/messageListPage/SET_USER_EMAIL';
@@ -59,9 +60,9 @@ export const getMessageListPageData = () => (
   }
 );
 
-export const goToMessageItemPageFromMessageListPage = recipientEmail => (
+export const goToChatRoomPageFromMessageListPage = (userEmail, recipientEmail) => (
   (dispatch) => {
-    dispatch({ type: null });
+    dispatch(setEmailAddressesInChatRoomPage(userEmail, recipientEmail));
     dispatch(push(`messages/${recipientEmail}`));
   }
 );

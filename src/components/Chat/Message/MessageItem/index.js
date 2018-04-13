@@ -49,7 +49,7 @@ class MessageItem extends Component {
             <Paragraph label={this.props.lastMessage} size="small" />
           </div>
         </div>
-        <button onClick={this.onClickHandler} />
+        <button onClick={e => this.onClickHandler(e)} />
       </div>
     );
   }

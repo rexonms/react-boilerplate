@@ -29,6 +29,7 @@ describe('MessageInput Component', () => {
     const input = wrapper.find('input');
     input.simulate('keyUp', { key: keyCode, keyCode, which: keyCode });
     expect(spy).toHaveBeenCalled();
+    expect(input.instance().value).toEqual('');
   });
   it('checks enter sendMessage props', () => {
     const keyCode = 13;

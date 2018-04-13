@@ -7,6 +7,12 @@ import ChatRoomItem from './index';
 import { CHAT_BOX_FRIEND, CHAT_BOX_USER } from './Const';
 
 const stories = storiesOf('components/Chat/ChatRoom/ChatRoomItem', module);
+const styles = {
+  width: '500px',
+  background: '#fff',
+  border: '1px solid #ccc',
+  padding: '20px',
+};
 
 export const props = {
   chatBoxTypes: [CHAT_BOX_FRIEND, CHAT_BOX_USER],
@@ -25,6 +31,6 @@ stories.add('ChatRoomItem', withInfo(`
 `)(() => {
   const type = select('type', props.chatBoxTypes, props.chatBoxTypes[0]);
   return (
-    <ChatRoomItem {...props} type={type} />
+    <div style={styles}> <ChatRoomItem {...props} type={type} /> </div>
   );
 }));

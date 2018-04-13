@@ -1,9 +1,14 @@
 .container {
-
+  width: 100%;
 }
 .input {
   background: rgba(255,255,255,.9);
   border: 1px solid #eee;
   border-radius: 10px;
-  padding: 10px;
+  padding: 4% 3%;
+  width: calc(100% - 6%);
+  font-size: $fontSizeSmall;
+}
+.input:focus {
+  outline: none;
 }

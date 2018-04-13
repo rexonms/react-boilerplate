@@ -6,12 +6,33 @@
   width: 100%;
   height: 100%;
 }
-.chatList {
+.header {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #bbb;
   width: 100%;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.chatList {
+  width: 95%;
   flex: 10;
 }
 .chatInput {
-  background: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   flex: 1;
+  div {
+    width: 90%;
+  }
 }

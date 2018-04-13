@@ -12,9 +12,12 @@ import MessageList from '../../components/Chat/Message/MessageList/index';
 const propTypes = {
   messages: PropTypes.shape({
     data: PropTypes.shape({}),
+    user: PropTypes.shape({
+      email: PropTypes.string,
+    }),
   }).isRequired,
   getMessageListPageData: PropTypes.func.isRequired,
-  goToMessageItemPageFromMessageListPage: PropTypes.func.isRequired,
+  goToChatRoomPageFromMessageListPage: PropTypes.func.isRequired,
 };
 const defaultProps = {};
 
@@ -28,7 +31,7 @@ export class MessageListPage extends Component {
     this.props.getMessageListPageData();
   }
   onClickHandler(recipientEmail) {
-    this.props.goToMessageItemPageFromMessageListPage(recipientEmail);
+    this.props.goToChatRoomPageFromMessageListPage(this.props.messages.user.email, recipientEmail);
   }
   render() {
     if (!this.props.messages.data) {

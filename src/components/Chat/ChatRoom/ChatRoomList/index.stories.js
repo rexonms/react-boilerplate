@@ -4,15 +4,25 @@ import { withKnobs } from '@storybook/addon-knobs/react';
 import { withInfo } from '@storybook/addon-info';
 
 import ChatRoomList from './index';
-import { conversationList } from './dummyData';
+import { conversationList, CHAT_USER_EMAIL_ADDRESS } from './dummyData';
 
 const stories = storiesOf('components/Chat/ChatRoom/ChatRoomList', module);
-
+const styles = {
+  width: '500px',
+  margin: 'auto',
+  background: '#fff',
+  padding: '20px',
+  border: '1px solid #eee',
+};
 stories.addDecorator(withKnobs);
 stories.addDecorator(story => (story()));
 stories.add('ChatRoomList', withInfo(`
-  Component
+  Chat Room list displays all the message for the current user. 
   ~~~js
     <ChatRoomList list={conversationList} />)
   ~~~
-`)(() => <ChatRoomList list={conversationList} />));
+`)(() => (
+  <div style={styles}>
+    <ChatRoomList userEmail={CHAT_USER_EMAIL_ADDRESS} list={conversationList} />
+  </div>
+)));
