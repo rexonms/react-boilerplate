@@ -4,7 +4,7 @@ import { withKnobs } from '@storybook/addon-knobs/react';
 import { withInfo } from '@storybook/addon-info';
 
 import ChatRoomList from './index';
-import { conversationList, CHAT_USER_EMAIL_ADDRESS } from './dummyData';
+import { conversationList } from './dummyData';
 
 const stories = storiesOf('components/Chat/ChatRoom/ChatRoomList', module);
 const styles = {
@@ -23,6 +23,6 @@ stories.add('ChatRoomList', withInfo(`
   ~~~
 `)(() => (
   <div style={styles}>
-    <ChatRoomList userEmail={CHAT_USER_EMAIL_ADDRESS} list={conversationList} />
+    <ChatRoomList list={conversationList} />
   </div>
 )));

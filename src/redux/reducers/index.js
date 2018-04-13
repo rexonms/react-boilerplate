@@ -1,10 +1,10 @@
 import home from './../../containers/Home/ducks/index';
-import messages from './../../containers/MessageListPage/ducks/';
+import friends from '../../containers/FriendListPage/ducks/';
 import chatRoom from './../../containers/ChatRoomPage/ducks/';
 
 const reducers = {
   home,
-  messages,
+  friends,
   chatRoom,
 };
 

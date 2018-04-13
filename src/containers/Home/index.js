@@ -18,7 +18,7 @@ class Home extends Component {
   }
   onClickHandler() {
     if (this.emailObj.valid) {
-      this.props.goToMessageListPage(this.emailObj.email);
+      this.props.goToFriendListPage(this.emailObj.email);
     }
   }
   onBlurHandler(emailObj) {
@@ -58,7 +58,7 @@ Home.propTypes = {
       buttonLabel: PropTypes.string,
     }),
   }),
-  goToMessageListPage: PropTypes.func.isRequired,
+  goToFriendListPage: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);

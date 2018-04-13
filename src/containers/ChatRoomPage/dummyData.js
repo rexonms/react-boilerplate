@@ -1,39 +1,63 @@
-const chatterAEmail = 'rexonms@gmail.com';
-const chatterBEmail = 'john@mail.com';
-export const chatterAImage = 'http://dummyimage.com/mediumrectangle/111111/eeeeee';
-export const chatterBImage = 'http://dummyimage.com/mediumrectangle/cccccc/eeeeee';
+export const chatterAEmail = 'rexonms@gmail.com';
+export const chatterBEmail = 'john@mail.com';
+
+export const CHAT_USER_DETAILS = {
+  email: 'rexonms@gmail.com',
+  imageURL: 'http://dummyimage.com/mediumrectangle/111111/eeeeee',
+  imageAltText: 'image alt text',
+};
+export const CHAT_FRIEND_DETAILS = {
+  email: 'john@mail.com',
+  imageURL: 'http://dummyimage.com/mediumrectangle/cccccc/eeeeee',
+  imageAltText: 'image alt text',
+};
+
 export const dummyMessages = {
   conversations: {
-    1: {
-      id: '1',
+    100: {
+      id: '100',
       chatterAEmail,
       chatterBEmail,
-      messages: [
-        {
+      messagesByHash: {
+        1: {
           id: '1',
-          message: 'Hello!',
-          authorEmail: chatterAEmail,
-          recipientEmail: chatterBEmail,
+          isUser: true,
+          author: CHAT_USER_DETAILS,
+          recipient: CHAT_FRIEND_DETAILS,
+          message: 'hola!',
         },
-        {
+        2: {
           id: '2',
-          message: 'WhatS up!',
-          authorEmail: chatterBEmail,
-          recipientEmail: chatterAEmail,
+          isUser: false,
+          author: CHAT_FRIEND_DETAILS,
+          recipient: CHAT_USER_DETAILS,
+          message: 'whats up!',
+
         },
-        {
+        3: {
           id: '3',
-          message: 'How is life?',
-          authorEmail: chatterBEmail,
-          recipientEmail: chatterAEmail,
+          isUser: false,
+          author: CHAT_FRIEND_DETAILS,
+          recipient: CHAT_USER_DETAILS,
+          message: 'Where did you go?',
         },
-        {
+        4: {
           id: '4',
-          message: 'Do you know? There are two options, either you should spy on _handleCloneClick of component\'s prototype, before you render the component.',
-          authorEmail: chatterBEmail,
-          recipientEmail: chatterAEmail,
+          isUser: true,
+          author: CHAT_USER_DETAILS,
+          recipient: CHAT_FRIEND_DETAILS,
+          message: 'Oops sorry! didn\'t se you message',
         },
-      ],
+        5: {
+          id: '5',
+          isUser: true,
+          author: CHAT_USER_DETAILS,
+          recipient: CHAT_FRIEND_DETAILS,
+          message: 'In addition, you should probably review the links in the \'See Also\' section of that document. I especially recommend the video presentations.\n' +
+          '\n' +
+          'Finally, you should probably take a look at this document for a discussion of the three possible schemas for a messaging/commenting database, including the trade-offs for each design: ',
+        },
+      },
     },
   },
 };

@@ -1,6 +1,6 @@
 import { push } from 'react-router-redux';
 import { setValueInLocalStorage, LOCAL_STORAGE_EMAIL_KEY } from '../../../utils/localStorage';
-import { setUserEmailAddressInMessageListPage } from '../../MessageListPage/ducks/index';
+import { setUserEmailAddressInFriendListPage } from '../../FriendListPage/ducks/index';
 
 // Actions
 
@@ -15,14 +15,14 @@ const reducers = (state = {}, action = {}) => {
 };
 
 // Action Creator
-export const goToMessageListPage = email => (
+export const goToFriendListPage = email => (
   (dispatch) => {
     // first save the email on local host
     setValueInLocalStorage(LOCAL_STORAGE_EMAIL_KEY, email);
     // pass the email to messageList Page
-    dispatch(setUserEmailAddressInMessageListPage(email));
-    // go to messageListPage
-    dispatch(push('/messages'));
+    dispatch(setUserEmailAddressInFriendListPage(email));
+    // go to FriendListPage
+    dispatch(push('/people'));
   }
 );
 

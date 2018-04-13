@@ -1,4 +1,6 @@
 .container {
+  overflow: scroll;
+  background: red;
 }
 .content {
   display: flex;
