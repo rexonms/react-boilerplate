@@ -53,26 +53,28 @@ class ChatRoomList extends Component {
 
   render() {
     return (
-      <div ref={this.listRef} className={`${Styles.container}`}>
-        {Object.keys(this.props.list).map((key) => {
-          const conversation = this.props.list[key];
-          const type = conversation.isUser ? CHAT_BOX_USER : CHAT_BOX_FRIEND;
-          const imageURL = conversation.isUser ?
-            conversation.author.imageURL : conversation.recipient.imageURL;
-          const imageAltText = conversation.isUser ?
+      <div className={`${Styles.container}`}>
+        <div ref={this.listRef} className={Styles.autoScrollContainer}>
+          {Object.keys(this.props.list).map((key) => {
+            const conversation = this.props.list[key];
+            const type = conversation.isUser ? CHAT_BOX_USER : CHAT_BOX_FRIEND;
+            const imageURL = conversation.isUser ?
+              conversation.author.imageURL : conversation.recipient.imageURL;
+            const imageAltText = conversation.isUser ?
               conversation.author.imageAltText : conversation.recipient.imageAltText;
-          return (
-            <div key={`conversation-${conversation.id}`} className={`${Styles.content} ${Styles[type]}`}>
-              <ChatRoomItem
-                id={conversation.id}
-                message={conversation.message}
-                type={type}
-                imageURL={imageURL}
-                imageAltText={imageAltText}
-              />
-            </div>
-          );
-        })}
+            return (
+              <div key={`conversation-${conversation.id}`} className={`${Styles.content} ${Styles[type]}`}>
+                <ChatRoomItem
+                  id={conversation.id}
+                  message={conversation.message}
+                  type={type}
+                  imageURL={imageURL}
+                  imageAltText={imageAltText}
+                />
+              </div>
+            );
+          })}
+        </div>
       </div>
     );
   }

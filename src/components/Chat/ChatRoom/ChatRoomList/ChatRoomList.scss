@@ -1,6 +1,8 @@
 .container {
+  //height: 400px;
+}
+.autoScrollContainer {
   overflow: scroll;
-  background: red;
 }
 .content {
   display: flex;
