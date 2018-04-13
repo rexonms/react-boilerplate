@@ -21,13 +21,13 @@ const defaultProps = {
 };
 
 const ChatRoomItem = props => (
-  <div className={`${Styles.container}`}>
+  <div className={`${Styles.container} ${Styles[props.type]}`}>
     {props.type === CHAT_BOX_FRIEND &&
       <div className={Styles.thumbnail}>
         <Avatar imageURL={props.imageURL} imageAltText={props.imageAltText} />
       </div>
     }
-    <div className={` ${Styles.message} ${Styles[props.type]}`}>
+    <div className={`side ${Styles.message}`}>
       <p>{props.message}</p>
     </div>
   </div>

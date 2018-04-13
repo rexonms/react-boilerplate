@@ -34,15 +34,13 @@ const ChatRoomList = props => (
       const type = props.userEmail === conversation.authorEmail ? CHAT_BOX_USER : CHAT_BOX_FRIEND;
       return (
         <div key={`conv-${conversation.id}`} className={`${Styles.content} ${Styles[type]}`}>
-          <div className={Styles.side}>
-            <ChatRoomItem
-              id={conversation.id}
-              message={conversation.message}
-              type={type}
-              imageURL={conversation.imageURL}
-              imageAltText={conversation.imageAltText}
-            />
-          </div>
+          <ChatRoomItem
+            id={conversation.id}
+            message={conversation.message}
+            type={type}
+            imageURL={conversation.imageURL}
+            imageAltText={conversation.imageAltText}
+          />
         </div>
       );
     })}

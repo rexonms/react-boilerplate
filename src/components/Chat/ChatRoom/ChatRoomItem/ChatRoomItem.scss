@@ -3,9 +3,17 @@
   justify-content: flex-start;
   align-items: flex-start;
 }
+.user {
+
+}
+.friend {
+
+}
 .message {
   padding: 10px;
   border-radius: 20px;
+  width: 70%;
+  background: #ccc;
   p {
     margin: 0;
     font-size: $fontSizeSmall;
@@ -17,10 +25,4 @@
     width: 30px;
     height: 30px;
   }
-}
-.user {
-  background: #ccc;
-}
-.friend {
-  background: #eee;
 }
