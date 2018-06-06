@@ -1,0 +1,37 @@
+import React, { Component } from 'react';
+import PropType from 'prop-types';
+import { Link } from 'react-router-dom';
+import Styles from './{{name}}.scss';
+
+const defaultProps = {
+};
+const propTypes = {
+  {{nameProp}}: PropType.shape({
+    data: PropType.shape({}).isRequired,
+  }).isRequired,
+};
+
+class {{name}}Content extends Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
+  render() {
+    const { data } = this.props.{{nameProp}};
+    return (
+      <div className={Styles.container}>
+        <div className={Styles.content}>
+          <Link to="/" href="/">home</Link>
+          <p className={Styles.heading}>{data.translations.title}</p>
+          <p>{data.translations.paragraph}</p>
+          <p>{data.dbData.user.name} : {data.dbData.user.email}</p>
+        </div>
+      </div>
+    );
+  }
+}
+
+{{name}}Content.defaultProps = defaultProps;
+{{name}}Content.propTypes = propTypes;
+
+export default {{name}}Content;

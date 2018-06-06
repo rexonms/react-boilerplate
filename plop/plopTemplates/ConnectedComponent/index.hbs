@@ -1,0 +1,34 @@
+// https://tylergaw.com/articles/dynamic-redux-reducers/
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+
+import * as actions from './ducks/';
+import {{name}}Content from './{{name}}Content';
+
+const defaultProps = {
+  {{nameProp}}: {},
+};
+const propTypes = {
+  {{nameProp}}: PropTypes.shape(),
+  get{{name}}DataFromServer: PropTypes.func.isRequired,
+};
+
+const {{name}} = props => (
+  <PageContainerHOC
+    pageName="{{name}}"
+    pageData={props.{{nameProp}} }
+    action={props.get{{name}}DataFromServer}
+  >
+    <{{name}}Content {...props} />
+  </PageContainerHOC>
+);
+
+const mapStateToProps = ({ {{nameProp}} }) => ({ {{nameProp}} });
+const mapDispatchToProps = dispatch => (bindActionCreators(actions, dispatch));
+
+{{name}}.defaultProps = defaultProps;
+{{name}}.propTypes = propTypes;
+
+export default connect(mapStateToProps, mapDispatchToProps)({{name}});

@@ -1,0 +1,43 @@
+@import '../../../styles/shared.scss';
+.container {
+
+}
+.title {
+  margin-bottom: 40px;
+}
+.program {
+  display: flex;
+  justify-content: flex-start;
+  justify-items: flex-start;
+  min-height: 75px;
+  p {
+    margin: 0 0 40px 0;
+  }
+}
+.iconAward {
+  height: 75px;
+}
+.icon {
+  min-height: 50px;
+  margin-right: 20px;
+  span {
+    display: inline-block;
+  }
+}
+.momo {
+  background: url('./assets/momo.svg') no-repeat top;
+  width: 100px;
+  height: 42px;
+}
+.thukpa {
+  margin-top: 5px;
+  background: url('./assets/thukpa.svg') no-repeat top;
+  width: 86px;
+  height: 60px;
+}
+
+@media only screen and (max-width: $mobileMaxWidth) {
+  .icon {
+    display: none;
+  }
+}

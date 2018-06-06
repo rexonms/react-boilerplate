@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateExpiration Component Snapshot matches 1`] = `
+<span
+  className="container"
+>
+  <p>
+    (expired)
+  </p>
+</span>
+`;

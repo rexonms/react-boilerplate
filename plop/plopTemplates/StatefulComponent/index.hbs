@@ -1,0 +1,62 @@
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
+import Styles from './{{name}}.scss';
+
+const propTypes = {
+  /** Button label when bulb is turned on */
+  buttonLabelOn: PropTypes.string,
+  /** Button label when bulb is turned off */
+  buttonLabelOff: PropTypes.string,
+  /** The default state of the bulb */
+  bulbState: PropTypes.bool,
+};
+
+const defaultProps = {
+  bulbState: true,
+  buttonLabelOn: 'On',
+  buttonLabelOff: 'Off',
+};
+
+class {{name}} extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      bulbState: props.bulbState,
+    };
+    this.onClickHandler = this.onClickHandler.bind(this);
+    this.getBulbClass = this.getBulbClass.bind(this);
+    this.getButtonLabel = this.getButtonLabel.bind(this);
+  }
+  onClickHandler() {
+    this.setState({
+      bulbState: !this.state.bulbState,
+    });
+  }
+  getBulbClass() {
+    return this.state.bulbState === true ? Styles.bulbOn : Styles.bulbOff;
+  }
+  getButtonLabel() {
+    return this.state.bulbState === true ? this.props.buttonLabelOn : this.props.buttonLabelOff;
+  }
+  render() {
+    return (
+      <div className={Styles.container}>
+        <div className={Styles.image}>
+          <div className={`${Styles.bulb} ${this.getBulbClass()}`} />
+        </div>
+        <button
+          className={Styles.button}
+          onClick={this.onClickHandler}
+        >
+          {this.getButtonLabel()}
+        </button>
+      </div>
+    );
+  }
+}
+
+{{name}}.propTypes = propTypes;
+{{name}}.defaultProps = defaultProps;
+
+export default {{name}};

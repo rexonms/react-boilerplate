@@ -1,0 +1,25 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
+import Styles from './{{name}}.scss';
+
+const propTypes = {
+  /** Vehicle Model Name */
+  vehicle: PropTypes.string.isRequired,
+  /** Number of vehicles */
+  count: PropTypes.number.isRequired,
+};
+
+const defaultProps = {};
+
+const {{name}} = props => (
+  <div className={`${Styles.container}`}>
+    <p>{props.vehicle}</p>
+    <p>{props.count}</p>
+  </div>
+);
+
+{{name}}.propTypes = propTypes;
+{{name}}.defaultProps = defaultProps;
+
+export default {{name}};
