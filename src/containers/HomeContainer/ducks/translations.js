@@ -10,7 +10,7 @@ const translations = {
       },
       {
         id: '2',
-        icon: 'cupCake',
+        icon: 'thukpa',
         description: 'Refer a thukpa to your friends and give unlimited supply of achar',
       },
     ],

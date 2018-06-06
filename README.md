@@ -48,4 +48,3 @@ Add the script tag to access the js bundle.
 - search for `Successfully tagged` and copy the url
     - `$ docker run -it --entrypoint=/bin/sh {url}`
     - `$ ls` to view the content of the docker
-        
