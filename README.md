@@ -26,11 +26,6 @@ To access the bundle in CMS first create a production bundle and run the server.
 ##### 2) Add the App Script
 Add the script tag to access the js bundle. 
 
-###### Drupal
-    cmsName_add_js(http://localhost:5000, array('external' => TRUE));
-
-###### AEM 
-    TDB
 
 #### 3) Initialize the application
 
@@ -46,12 +41,6 @@ Add the script tag to access the js bundle.
         });
      </script>
 
-
-# PR
-- The PR that is merged to `r/*` will automatically generate a build.
-- The build link/status will be in `/commits` page of the repo
-- Click on the icon to get the build details
-
 # Docker Build
     -  $ docker build .
     
@@ -60,6 +49,3 @@ Add the script tag to access the js bundle.
     - `$ docker run -it --entrypoint=/bin/sh {url}`
     - `$ ls` to view the content of the docker
         
-# Artifactory
-https://confluence.domainName.com/display/WEB/Docker+Registries+in+Artifactory
-
