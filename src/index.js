@@ -10,7 +10,7 @@ import './debugger';
 const store = configuredStore();
 
 // Attach the app name to the window object so that it can be accessed from browser
-window.__ATM_SAMPLE_APP_APP_REACT_JS__ = (args) => {
+window.__SAMPLE_APP_APP_REACT__ = (args) => {
   // Update the store with args
   store.dispatch(setInitialArguments(args));
   initGoogleAnalytics(args.gaId);

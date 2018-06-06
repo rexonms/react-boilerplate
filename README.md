@@ -1,9 +1,3 @@
-
-###### App Info 
-    - Component - https://drive.google.com/file/d/1xQcfbplg4P6kjqAkshmmWzFNyFxjae0A/view?usp=sharing
-    - Redux - 
-    - https://digital-team.quip.com/F2c8A3c2ABaQ/myMomo-Dashboard-Eating
-    
 # Set Up
 ##### Set up Environment 
     - Copy `.sample.env` and name it .`env`
@@ -34,7 +28,7 @@ To access the bundle in CMS first create a production bundle and run the server.
 Add the script tag to access the js bundle. 
 
 ###### Drupal
-    drupal_add_js(http://localhost:5000, array('external' => TRUE));
+    cmsName_add_js(http://localhost:5000, array('external' => TRUE));
 
 ###### AEM 
     TDB
@@ -43,8 +37,8 @@ Add the script tag to access the js bundle.
 
      <script>
         document.addEventListener("DOMContentLoaded", function() {
-            window.__ATM_SAMPLE_APP_APP_REACT_JS__({                                            
-                'cms' : 'drupal',                                                            // For CMS specific logic
+            window.__SAMPLE_APP_APP_REACT__({                                            
+                'cms' : 'cmsName',                                                            // For CMS specific logic
                 'cmsEnv' : 'DEV',                                                            // For environment specific logic for the app
                 'locale' : 'en_CA',                                                          // For locale specific logic 
                 'divId' : 'root',                                                            // Id of the div where the app will be injected
