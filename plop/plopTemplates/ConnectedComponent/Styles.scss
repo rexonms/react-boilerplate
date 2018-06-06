@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:700');
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 600px;
+  height: 400px;
+  margin: auto;
+  padding: 40px;
+  background: #111;
+  border-radius: 20px;
+  p {
+  }
+}
+.heading {
+  font-family: 'Dancing Script', cursive;
+  font-size: 80px;
+  margin: 20px 0 40 0;
+}

@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid $greyC;
+}
+a.navTab {
+  display: inline-block;
+  flex-grow: 1;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 3px solid #fff;
+  color: $greyC;
+}
+a.navTabSelected {
+  border-bottom: 3px solid $momoRed;
+  color: $grey2;
+}

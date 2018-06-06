@@ -1,0 +1,38 @@
+$selectedColor: #CC0000;
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 600px;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #ccc;
+}
+
+.radioContainer {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  height: 100%;
+  border-bottom: 2px solid #fff;
+
+  label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  input {
+    opacity: 0;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+.selected {
+  border-bottom-color: $selectedColor;
+}

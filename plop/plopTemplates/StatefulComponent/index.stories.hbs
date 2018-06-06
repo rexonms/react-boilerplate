@@ -1,0 +1,24 @@
+import React from 'react';
+import { storiesOf } from '@storybook/react';
+import { withKnobs } from '@storybook/addon-knobs/react';
+import { withInfo } from '@storybook/addon-info';
+
+import {{name}} from './index';
+
+const stories = storiesOf('{{path}}/{{name}}', module);
+export const props = {
+  buttonLabelOn: 'on',
+  buttonLabelOff: 'off',
+};
+
+stories.addDecorator(withKnobs);
+stories.addDecorator(story => (story()));
+stories.add('{{name}}', withInfo(`
+  A Stateful Component example that toggles the bulb state based on user click event.
+~~~js
+ <{{name}}
+    buttonLabelOn="on"
+    buttonLabelOff="off"
+  />
+~~~
+`)(() => <{{name}} {...props} />));

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateFormatter Component renders matchs previous snapshot 1`] = `
+<div
+  className="container"
+>
+  <p>
+    05/29/18
+  </p>
+</div>
+`;

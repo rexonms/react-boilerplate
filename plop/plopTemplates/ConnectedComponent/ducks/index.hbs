@@ -1,0 +1,42 @@
+// Actions
+const SET_{{nameReducer}}_INITIAL_DATA = 'app/{{name}}/SET_{{nameReducer}}_DATA_INITIAL_DATA';
+
+// Reducers
+const {{name}}Reducers = (state = {}, action = {}) => {
+  switch (action.type) {
+    case SET_{{nameReducer}}_INITIAL_DATA:
+      return Object.assign({}, state, {
+        data: action.payload,
+      });
+    default:
+      return state;
+  }
+};
+
+// Action Creators
+export const set{{name}}Data = data => ({ type: SET_{{nameReducer}}_INITIAL_DATA, payload: data });
+
+const dummyData = {
+  translations: {
+    title: '{{name}} Page',
+    paragraph: 'Cupcake ipsum dolor sit amet macaroon. Cake fruitcake tiramisu. I love ice cream pie I love oat cake tart. I love chupa chups I love cookie marzipan fruitcake apple pie halvah. Lemon drops halvah carrot cake toffee marzipan. Sugar plum liquorice chocolate cake I love pudding dessert croissant gummies. Powder bonbon jelly chocolate cake powder. Sweet roll gummies biscuit halvah marshmallow cookie sugar plum. I love caramels donut gingerbread gingerbread apple pie dragée I love candy canes. Cupcake oat cake gummies marshmallow chupa chups. Caramels chocolate cake I love. Biscuit brownie toffee I love candy marzipan cotton candy I love. Apple pie gummies biscuit.',
+  },
+  dbData: {
+    user: {
+      name: 'John',
+      email: 'john.doe@email.com',
+    },
+  },
+};
+
+// Side effects, only as applicable
+// e.g. thunks, epics
+export const get{{name}}DataFromServer = () => (
+  dispatch => (
+    setTimeout(() => {
+      dispatch(set{{name}}Data(dummyData));
+    }, 1000)
+  )
+);
+
+export default {{name}}reducers;

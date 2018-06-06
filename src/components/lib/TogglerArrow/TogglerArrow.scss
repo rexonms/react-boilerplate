@@ -1,0 +1,12 @@
+.container {
+  border: none;
+  outline: none;
+  width: 25px;
+  height: 15px;
+  background: url('./assets/dropDown.svg') no-repeat center;
+  transform: rotate(180deg);
+  transition: transform .3s linear;
+}
+.flipped {
+  transform: rotate(0deg);
+}

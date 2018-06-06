@@ -1,22 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
-import { Provider } from 'react-redux';
+import { render } from 'react-dom';
 
-import store from './store';
-import Main from './containers/Main';
-import './styles.scss';
+import configuredStore from './configuredStore';
+import Root from './components/Root';
+import { setInitialArguments } from './containers/HomeContainer/ducks/';
 import { initGoogleAnalytics } from './utils/ga';
+import './debugger';
 
-initGoogleAnalytics();
+const store = configuredStore();
 
-// Route path="/" is required for the switch location prop for main.js.
-// The location prop is used for transition effect
-ReactDOM.render(
-  <Provider store={store}>
-    <BrowserRouter basename="">
-      <Route path="/" component={Main} />
-    </BrowserRouter>
-  </Provider>,
-  document.getElementById('root'),
-);
+// Attach the app name to the window object so that it can be accessed from browser
+window.__SAMPLE_APP_APP_REACT__ = (args) => {
+  // Update the store with args
+  store.dispatch(setInitialArguments(args));
+  initGoogleAnalytics(args.gaId);
+  return render(<Root store={store} args={args} />, document.getElementById(args.divId));
+};
