@@ -1,7 +1,6 @@
 # Set Up
 ##### Set up Environment 
     - Copy `.sample.env` and name it .`env`
-    - $ npm config set registry https://npmregistry.domainName.com
     - $ npm i
 
 #### Development
