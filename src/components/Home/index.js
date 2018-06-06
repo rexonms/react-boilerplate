@@ -16,7 +16,6 @@ const PreviousContest = Loadable({
 const propTypes = {
   title: PropTypes.string.isRequired,
   programDetails: PropTypes.shape({}).isRequired,
-  socialShare: PropTypes.shape({}).isRequired,
   mainNav: PropTypes.shape({}).isRequired,
 };
 const defaultProps = {};
@@ -33,9 +32,6 @@ const Home = props => (
         <PreviousContest />
       </div>
     </div>
-    <div className={Styles.paneBottom}>
-    </div>
-
   </div>
 );
 

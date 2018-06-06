@@ -1,18 +1,2 @@
 FROM artifactory.domainName.com:2013/atm-baseimages/nodejs-8-sdk:latest
 
-# Prep the temporary build image
-WORKDIR /app
-COPY . .
-
-# Set npm registery to domainName
-RUN npm config set registry https://npmregistry.domainName.com
-
-# Install dependencies
-RUN yarn
-RUN yarn build
-RUN yarn run test --coverage
-
-RUN run-sonar-scanner \
-        -D sonar.exclusions=node_modules/**/* \
-        -D sonar.sources=src \
-        -D sonar.javascript.lcov.reportPaths=coverage/lcov.info

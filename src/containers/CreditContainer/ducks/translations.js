@@ -1,9 +1,9 @@
 const translations = {
   creditRemaining: {
-    label: 'Total Credits Remaining',
-    amount: '$1,400',
+    label: 'Total Momo Credits Remaining',
+    amount: 'Rs14',
   },
-  creditDisclaimer: 'Momo credit can be applied to Momo merchandise, software upgrades and servicing your product.',
+  creditDisclaimer: 'Momo credit can be applied to Momo and achars.',
 };
 
 export default translations;
